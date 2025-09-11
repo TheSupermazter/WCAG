@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const imageDescriptions = {
-        "1.1.1": "Sportini logo",
+        "1.1.1": "Zorg dat je bij alle afbeeldingen een alt-tekst toevoegt en aria-labels gebruikt voor iconen.",
         "1.2.1": "A visual example for WCAG success criterion 1.2.1: Audio-only and Video-only (Prerecorded).",
         "1.2.2": "A visual example for WCAG success criterion 1.2.2: Captions (Prerecorded).",
         "1.2.3": "A visual example for WCAG success criterion 1.2.3: Audio Description or Media Alternative (Prerecorded).",

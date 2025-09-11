@@ -154,7 +154,7 @@ h1, h2 {
 }
 .expanded-content p {
     font-style: italic;
-    color: #666;
+    color: #d1d1d1;
     margin-top: 5px;
 }
 .checklist li.expanded .expanded-content {
