@@ -1,0 +1,490 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const content = {
+        en: {
+            title: "WCAG 2.2 Accessibility Checklist",
+            description: "A comprehensive checklist for WCAG 2.2 Success Criteria.",
+            levelAHeading: "Level A",
+            levelAAHeading: "Level AA",
+            levelAAAHeading: "Level AAA",
+            footerText: "&copy; 2024 WCAG Checklist",
+            resetButton: "Reset",
+            resetButtonConfirmation: "Are you sure you want to reset the checklist? This action cannot be undone.",
+            confirm: "Confirm",
+            cancel: "Cancel",
+            items: {
+                levelA: [
+                    {"id": "1.1.1", "name": "Non-text Content", "description": "Provide text alternatives for images, icons, and other non-text content so assistive technologies can present them."},
+                    {"id": "1.2.1", "name": "Audio-only and Video-only (Prerecorded)", "description": "For prerecorded audio-only, provide a transcript. For prerecorded video-only, provide a text or audio alternative."},
+                    {"id": "1.2.2", "name": "Captions (Prerecorded)", "description": "Add captions to prerecorded videos with audio so deaf or hard-of-hearing users can understand."},
+                    {"id": "1.2.3", "name": "Audio Description or Media Alternative (Prerecorded)", "description": "Provide audio description or an alternative for video-only content."},
+                    {"id": "1.3.1", "name": "Info and Relationships", "description": "Ensure that headings, lists, tables, and other structures use correct semantic markup."},
+                    {"id": "1.3.2", "name": "Meaningful Sequence", "description": "Content should be presented in a logical reading order that makes sense with assistive technology."},
+                    {"id": "1.3.3", "name": "Sensory Characteristics", "description": "Instructions must not rely only on shape, size, sound, or visual location (e.g., 'click the red button')."},
+                    {"id": "1.3.4", "name": "Orientation", "description": "Content should not restrict display orientation (portrait/landscape)."},
+                    {"id": "1.3.5", "name": "Identify Input Purpose", "description": "Collect input purpose programmatically (e.g., name, email, address) to support autofill and personalization."},
+                    {"id": "1.4.1", "name": "Use of Color", "description": "Color alone should not be used to convey meaning (e.g., 'required fields in red')."},
+                    {"id": "1.4.2", "name": "Audio Control", "description": "If audio plays automatically for more than 3 seconds, users must be able to pause or stop it."},
+                    {"id": "2.1.1", "name": "Keyboard", "description": "All functionality must be available by keyboard alone."},
+                    {"id": "2.1.2", "name": "No Keyboard Trap", "description": "Users must not get stuck in a component when using keyboard navigation."},
+                    {"id": "2.1.4", "name": "Character Key Shortcuts", "description": "Provide a way to turn off or remap single-key shortcuts."},
+                    {"id": "2.2.1", "name": "Timing Adjustable", "description": "If time limits exist, allow users to extend or turn them off."},
+                    {"id": "2.2.2", "name": "Pause, Stop, Hide", "description": "Provide controls to pause, stop, or hide moving, blinking, or scrolling content."},
+                    {"id": "2.3.1", "name": "Three Flashes or Below Threshold", "description": "No content should flash more than 3 times per second (to avoid seizures)."},
+                    {"id": "2.4.1", "name": "Bypass Blocks", "description": "Provide a mechanism to skip repeated blocks of content (e.g., nav menus)."},
+                    {"id": "2.4.2", "name": "Page Titled", "description": "Each page should have a descriptive, unique title."},
+                    {"id": "2.4.3", "name": "Focus Order", "description": "Focus order must follow a logical, predictable sequence."},
+                    {"id": "2.4.4", "name": "Link Purpose (In Context)", "description": "The purpose of each link should be clear from its text or context."},
+                    {"id": "2.5.1", "name": "Pointer Gestures", "description": "Avoid requiring complex gestures (e.g., pinch) unless an alternative is provided."},
+                    {"id": "2.5.2", "name": "Pointer Cancellation", "description": "Ensure actions are only triggered on release, not on initial touch."},
+                    {"id": "2.5.3", "name": "Label in Name", "description": "Accessible names should include any visible text labels."},
+                    {"id": "2.5.4", "name": "Motion Actuation", "description": "Functions triggered by motion (shake, tilt) should have alternatives."},
+                    {"id": "3.1.1", "name": "Language of Page", "description": "Set the main language of the page in code."},
+                    {"id": "3.2.1", "name": "On Focus", "description": "Changing context automatically on focus should be avoided."},
+                    {"id": "3.2.2", "name": "On Input", "description": "Changing inputs should not automatically change context without warning."},
+                    {"id": "3.3.1", "name": "Error Identification", "description": "Clearly identify input errors with text descriptions."},
+                    {"id": "3.3.2", "name": "Labels or Instructions", "description": "Provide clear labels and instructions for form fields."},
+                    {"id": "4.1.1", "name": "Parsing", "description": "Ensure code is valid and elements are properly nested."},
+                    {"id": "4.1.2", "name": "Name, Role, Value", "description": "UI components must expose their name, role, and value to assistive tech."},
+                    {"id": "4.1.3", "name": "Status Messages", "description": "Status messages must be conveyed to assistive technologies."}
+                ],
+                levelAA: [
+                    {"id": "1.2.4", "name": "Captions (Live)", "description": "Provide captions for live audio content in synchronized media."},
+                    {"id": "1.2.5", "name": "Audio Description (Prerecorded)", "description": "Provide audio description for all prerecorded video content with audio."},
+                    {"id": "1.3.6", "name": "Identify Purpose", "description": "Identify common input fields and icons programmatically to support personalization."},
+                    {"id": "1.4.3", "name": "Contrast (Minimum)", "description": "Text and images of text should have at least 4.5:1 contrast ratio (3:1 for large text)."},
+                    {"id": "1.4.4", "name": "Resize Text", "description": "Text must be resizable up to 200% without loss of content or functionality."},
+                    {"id": "1.4.5", "name": "Images of Text", "description": "Use real text instead of images of text, unless essential."},
+                    {"id": "1.4.10", "name": "Reflow", "description": "Content should reflow without requiring scrolling in two dimensions, up to 400% zoom."},
+                    {"id": "1.4.11", "name": "Non-text Contrast", "description": "Visual elements (icons, controls) should have sufficient contrast against backgrounds."},
+                    {"id": "1.4.12", "name": "Text Spacing", "description": "Content must remain usable when users change text spacing (line height, letter spacing)."},
+                    {"id": "1.4.13", "name": "Content on Hover or Focus", "description": "Information shown on hover or focus must be dismissible, hoverable, and persistent."},
+                    {"id": "2.4.5", "name": "Multiple Ways", "description": "Provide multiple ways to locate a page within a set of pages (search, menu, sitemap)."},
+                    {"id": "2.4.6", "name": "Headings and Labels", "description": "Use descriptive headings and labels to help users understand content."},
+                    {"id": "2.4.7", "name": "Focus Visible", "description": "The keyboard focus indicator must be visible."},
+                    {"id": "2.5.5", "name": "Target Size (Enhanced in 2.2)", "description": "Interactive targets should be at least 24x24 CSS pixels."},
+                    {"id": "2.5.6", "name": "Concurrent Input Mechanisms", "description": "Websites should allow multiple input methods (mouse, keyboard, touch)."},
+                    {"id": "3.1.2", "name": "Language of Parts", "description": "Specify language changes within content (e.g., foreign words)."},
+                    {"id": "3.2.3", "name": "Consistent Navigation", "description": "Navigation mechanisms should appear consistently across pages."},
+                    {"id": "3.2.4", "name": "Consistent Identification", "description": "Componenten with the same functionality should be identified consistently."},
+                    {"id": "3.3.3", "name": "Error Suggestion", "description": "Provide suggestions for correcting input errors when possible."},
+                    {"id": "3.3.4", "name": "Error Prevention (Legal, Financial, Data)", "description": "For important transactions, provide confirmation, review, and correction options."},
+                    {"id": "3.3.7", "name": "Redundant Entry (new in 2.2)", "description": "Avoid asking users to re-enter the same information multiple times."},
+                    {"id": "3.3.8", "name": "Accessible Authentication (new in 2.2)", "description": "Authentication must not rely only on cognitive function tests (like puzzles)."}
+                ],
+                levelAAA: [
+                    {"id": "1.2.6", "name": "Sign Language (Prerecorded)", "description": "Provide sign language interpretation for all prerecorded audio content."},
+                    {"id": "1.2.7", "name": "Extended Audio Description (Prerecorded)", "description": "Provide extended audio description where pauses are insufficient."},
+                    {"id": "1.2.8", "name": "Media Alternative (Prerecorded)", "description": "Provide a full text alternative for prerecorded synchronized media."},
+                    {"id": "1.2.9", "name": "Audio-only (Live)", "description": "Provide a transcript or equivalent for live audio-only content."},
+                    {"id": "1.3.7", "name": "Reduced Motion (new in 2.2)", "description": "Allow users to reduce motion/animation if it causes discomfort."},
+                    {"id": "1.4.6", "name": "Contrast (Enhanced)", "description": "Text and images of text must have at least 7:1 contrast ratio (4.5:1 for large text)."},
+                    {"id": "1.4.7", "name": "Low or No Background Audio", "description": "Background sounds must be low, turn off-able, or at least 20 dB lower than foreground speech."},
+                    {"id": "1.4.8", "name": "Visual Presentation", "description": "Allow users to customize visual presentation (colors, spacing, font)."},
+                    {"id": "1.4.9", "name": "Images of Text (No Exception)", "description": "Do not use images of text at all."},
+                    {"id": "2.1.3", "name": "Keyboard (No Exception)", "description": "All content and functionality must be operable through keyboard without exception."},
+                    {"id": "2.2.3", "name": "No Timing", "description": "No time limits for completing tasks unless essential."},
+                    {"id": "2.2.4", "name": "Interruptions", "description": "Users should be able to postpone or suppress interruptions."},
+                    {"id": "2.2.5", "name": "Re-authenticating", "description": "Re-authentication should not cause loss of data."},
+                    {"id": "2.2.6", "name": "Timeouts", "description": "Warn users about inactivity timeouts that cause data loss."},
+                    {"id": "2.3.2", "name": "Three Flashes", "description": "No content flashes more than 3 times per second, even at higher levels."},
+                    {"id": "2.3.3", "name": "Animation from Interactions (new in 2.2)", "description": "Allow users to disable animations triggered by interactions."},
+                    {"id": "2.4.8", "name": "Location", "description": "Provide information about the user's location within a website, such as breadcrumbs."},
+                    {"id": "2.4.9", "name": "Link Purpose (Link Only)", "description": "Each link's purpose should be identifiable from the link text alone."},
+                    {"id": "2.4.10", "name": "Section Headings", "description": "Use headings to organize all content."},
+                    {"id": "2.4.11", "name": "Focus Appearance (new in 2.2)", "description": "The focus indicator must be highly visible and meet contrast requirements."},
+                    {"id": "2.5.7", "name": "Dragging Movements (new in 2.2)", "description": "Provide alternatives for actions that require dragging movements."},
+                    {"id": "2.5.8", "name": "Target Size (Minimum) (new in 2.2)", "description": "Targets must be at least 24x24 CSS-pixels with limited exceptions."},
+                    {"id": "3.1.3", "name": "Unusual Words", "description": "Provide definitions or explanations for uncommon or technical terms."},
+                    {"id": "3.1.4", "name": "Abbreviations", "description": "Provide expansions or meanings of abbreviations."},
+                    {"id": "3.1.5", "name": "Reading Level", "description": "Content should not require reading ability more advanced than lower secondary level."},
+                    {"id": "3.1.6", "name": "Pronunciation", "description": "Provide pronunciation guidance for words where meaning depends on pronunciation."},
+                    {"id": "3.2.5", "name": "Change on Request", "description": "Changes of context should only occur when requested by the user."},
+                    {"id": "3.3.5", "name": "Help", "description": "Provide help mechanisms, such as FAQs, instructions, or contact options."},
+                    {"id": "3.3.6", "name": "Error Prevention (All)", "description": "For all forms, allow review, correction, and confirmation before submission."}
+                ]
+            }
+        },
+        nl: {
+            title: "WCAG 2.2 Toegankelijkheidschecklist",
+            description: "Een uitgebreide checklist voor WCAG 2.2 Succescriteria.",
+            levelAHeading: "Niveau A",
+            levelAAHeading: "Niveau AA",
+            levelAAAHeading: "Niveau AAA",
+            footerText: "&copy; 2024 WCAG Checklist",
+            resetButton: "Resetten",
+            resetButtonConfirmation: "Weet u zeker dat u de checklist wilt resetten? Deze actie kan niet ongedaan worden gemaakt.",
+            confirm: "Bevestigen",
+            cancel: "Annuleren",
+            items: {
+                levelA: [
+                    {"id": "1.1.1", "name": "Niet-tekstuele content", "description": "Zorg voor tekstalternatieven voor afbeeldingen, iconen en andere niet-tekstuele content, zodat ondersteunende technologieën deze kunnen weergeven."},
+                    {"id": "1.2.1", "name": "Louter-geluid en louter-videobeeld (vooraf opgenomen)", "description": "Zorg voor een transcript voor vooraf opgenomen audio. Zorg voor een tekst- of audioalternatief voor vooraf opgenomen video."},
+                    {"id": "1.2.2", "name": "Ondertiteling (vooraf opgenomen)", "description": "Voeg ondertiteling toe aan vooraf opgenomen video's met audio, zodat dove of slechthorende gebruikers deze kunnen begrijpen."},
+                    {"id": "1.2.3", "name": "Audiodescriptie of media-alternatief (vooraf opgenomen)", "description": "Zorg voor audiodescriptie of een alternatief voor louter-videobeeld content."},
+                    {"id": "1.3.1", "name": "Info en relaties", "description": "Zorg ervoor dat koppen, lijsten, tabellen en andere structuren de juiste semantische opmaak gebruiken."},
+                    {"id": "1.3.2", "name": "Betekenisvolle volgorde", "description": "Content moet worden gepresenteerd in een logische leesvolgorde die met ondersteunende technologieën werkt."},
+                    {"id": "1.3.3", "name": "Sensorische kenmerken", "description": "Instructies mogen niet alleen afhankelijk zijn van vorm, grootte, geluid of visuele locatie (bijv. 'klik op de rode knop')."},
+                    {"id": "1.3.4", "name": "Oriëntatie", "description": "Content mag de schermoriëntatie (portret/landschap) niet beperken."},
+                    {"id": "1.3.5", "name": "Identificeer het invoerdoel", "description": "Verzamel programmatisch het invoerdoel (bijv. naam, e-mailadres) om automatisch invullen en personalisatie te ondersteunen."},
+                    {"id": "1.4.1", "name": "Gebruik van kleur", "description": "Kleur alleen mag niet worden gebruikt om betekenis over te brengen (bijv. 'verplichte velden in het rood')."},
+                    {"id": "1.4.2", "name": "Audiocontrole", "description": "Als audio automatisch afspeelt voor langer dan 3 seconden, moeten gebruikers dit kunnen pauzeren of stoppen."},
+                    {"id": "2.1.1", "name": "Toetsenbord", "description": "Alle functionaliteit moet volledig bedienbaar zijn met het toetsenbord."},
+                    {"id": "2.1.2", "name": "Geen toetsenbordval", "description": "Gebruikers mogen niet vast komen te zitten in een component bij gebruik van toetsenbordnavigatie."},
+                    {"id": "2.1.4", "name": "Sneltoetsen met enkelvoudige karakters", "description": "Zorg voor een manier om sneltoetsen met één toets uit te schakelen of te herdefiniëren."},
+                    {"id": "2.2.1", "name": "Timing aanpasbaar", "description": "Als er tijdslimieten zijn, moeten gebruikers deze kunnen verlengen of uitschakelen."},
+                    {"id": "2.2.2", "name": "Pauzeren, stoppen, verbergen", "description": "Zorg voor besturingselementen om bewegende, knipperende of scrollende content te pauzeren, stoppen of verbergen."},
+                    {"id": "2.3.1", "name": "Drie flitsen of beneden drempelwaarde", "description": "Geen enkele content mag meer dan 3 keer per seconde flitsen (om epileptische aanvallen te voorkomen)."},
+                    {"id": "2.4.1", "name": "Blokken omzeilen", "description": "Zorg voor een mechanisme om herhaalde blokken content over te slaan (bijv. navigatiemenu's)."},
+                    {"id": "2.4.2", "name": "Paginatitel", "description": "Elke pagina moet een beschrijvende, unieke titel hebben."},
+                    {"id": "2.4.3", "name": "Focusvolgorde", "description": "De focusvolgorde moet een logische, voorspelbare sequentie volgen."},
+                    {"id": "2.4.4", "name": "Linkdoel (in context)", "description": "Het doel van elke link moet duidelijk zijn vanuit de tekst of context."},
+                    {"id": "2.5.1", "name": "Aanwijzergebaren", "description": "Vermijd het vereisen van complexe gebaren (bijv. pinch) tenzij er een alternatief wordt geboden."},
+                    {"id": "2.5.2", "name": "Annulering aanwijzer", "description": "Zorg ervoor dat acties alleen worden geactiveerd bij loslaten, niet bij de initiële aanraking."},
+                    {"id": "2.5.3", "name": "Label in naam", "description": "Toegankelijke namen moeten alle zichtbare tekstlabels bevatten."},
+                    {"id": "2.5.4", "name": "Bewegingsactivering", "description": "Functies die worden geactiveerd door beweging (schudden, kantelen) moeten alternatieven hebben."},
+                    {"id": "3.1.1", "name": "Taal van de pagina", "description": "Stel de hoofdtaal van de pagina in de code in."},
+                    {"id": "3.2.1", "name": "Bij focus", "description": "Het automatisch wijzigen van context bij focus moet worden vermeden."},
+                    {"id": "3.2.2", "name": "Bij invoer", "description": "Het wijzigen van invoer mag de context niet automatisch veranderen zonder waarschuwing."},
+                    {"id": "3.3.1", "name": "Foutidentificatie", "description": "Identificeer invoerfouten duidelijk met tekstuele beschrijvingen."},
+                    {"id": "3.3.2", "name": "Labels of instructies", "description": "Zorg voor duidelijke labels en instructies voor formuliervelden."},
+                    {"id": "4.1.1", "name": "Parsen", "description": "Zorg ervoor dat de code geldig is en elementen correct genesteld zijn."},
+                    {"id": "4.1.2", "name": "Naam, rol, waarde", "description": "UI-componenten moeten hun naam, rol en waarde blootstellen aan ondersteunende technologieën."},
+                    {"id": "4.1.3", "name": "Statusberichten", "description": "Statusberichten moeten worden overgebracht naar ondersteunende technologieën."}
+                ],
+                levelAA: [
+                    {"id": "1.2.4", "name": "Ondertiteling (live)", "description": "Zorg voor ondertiteling voor live audiocontent in gesynchroniseerde media."},
+                    {"id": "1.2.5", "name": "Audiodescriptie (vooraf opgenomen)", "description": "Zorg voor audiodescriptie voor alle vooraf opgenomen videocontent met audio."},
+                    {"id": "1.3.6", "name": "Identificeer doel", "description": "Identificeer veelvoorkomende invoervelden en pictogrammen programmatisch om personalisatie te ondersteunen."},
+                    {"id": "1.4.3", "name": "Contrast (minimaal)", "description": "Tekst en afbeeldingen van tekst moeten ten minste een contrastverhouding van 4.5:1 hebben (3:1 voor grote tekst)."},
+                    {"id": "1.4.4", "name": "Herschalen van tekst", "description": "Tekst moet tot 200% herschaalbaar zijn zonder verlies van content of functionaliteit."},
+                    {"id": "1.4.5", "name": "Afbeeldingen van tekst", "description": "Gebruik echte tekst in plaats van afbeeldingen van tekst, tenzij dit essentieel is."},
+                    {"id": "1.4.10", "name": "Reflow", "description": "Content moet herindelen zonder dat er horizontaal scrollen nodig is, tot 400% zoom."},
+                    {"id": "1.4.11", "name": "Niet-tekst contrast", "description": "Visuele elementen (pictogrammen, bedieningselementen) moeten voldoende contrast hebben met de achtergrond."},
+                    {"id": "1.4.12", "name": "Tekstafstand", "description": "Content moet bruikbaar blijven wanneer gebruikers de tekstafstand wijzigen (regelafstand, letterafstand)."},
+                    {"id": "1.4.13", "name": "Content bij aanwijzen of focus", "description": "Informatie die wordt getoond bij aanwijzen of focus moet te verbergen zijn, aan te wijzen zijn, en persistent zijn."},
+                    {"id": "2.4.5", "name": "Meerdere manieren", "description": "Zorg voor meerdere manieren om een pagina binnen een reeks pagina's te vinden (zoeken, menu, sitemap)."},
+                    {"id": "2.4.6", "name": "Koppen en labels", "description": "Gebruik beschrijvende koppen en labels om gebruikers te helpen content te begrijpen."},
+                    {"id": "2.4.7", "name": "Focus zichtbaar", "description": "De focusindicator van het toetsenbord moet zichtbaar zijn."},
+                    {"id": "2.5.5", "name": "Doelgrootte (verbeterd in 2.2)", "description": "Interactieve doelen moeten ten minste 24x24 CSS-pixels zijn."},
+                    {"id": "2.5.6", "name": "Gelijktijdige invoermechanismen", "description": "Websites moeten meerdere invoermethoden toestaan (muis, toetsenbord, aanraken)."},
+                    {"id": "3.1.2", "name": "Taal van onderdelen", "description": "Specificeer taalveranderingen binnen content (bijv. buitenlandse woorden)."},
+                    {"id": "3.2.3", "name": "Consistente navigatie", "description": "Navigatiemechanismen moeten consistent verschijnen over verschillende pagina's."},
+                    {"id": "3.2.4", "name": "Consistente identificatie", "description": "Componenten met dezelfde functionaliteit moeten consistent worden geïdentificeerd."},
+                    {"id": "3.3.3", "name": "Foutsuggestie", "description": "Zorg voor suggesties om invoerfouten te corrigeren waar mogelijk."},
+                    {"id": "3.3.4", "name": "Foutpreventie (wettelijk, financieel, gegevens)", "description": "Voor belangrijke transacties, bied bevestigings-, beoordelings- en correctiemogelijkheden."},
+                    {"id": "3.3.7", "name": "Redundante invoer (nieuw in 2.2)", "description": "Vermijd het vragen aan gebruikers om dezelfde informatie meerdere keren opnieuw in te voeren."},
+                    {"id": "3.3.8", "name": "Toegankelijke authenticatie (nieuw in 2.2)", "description": "Authenticatie mag niet alleen afhankelijk zijn van cognitieve functietesten (zoals puzzels)."}
+                ],
+                levelAAA: [
+                    {"id": "1.2.6", "name": "Gebarentaal (vooraf opgenomen)", "description": "Zorg voor gebarentaalinterpretatie voor alle vooraf opgenomen audiocontent."},
+                    {"id": "1.2.7", "name": "Uitgebreide audiodescriptie (vooraf opgenomen)", "description": "Zorg voor uitgebreide audiodescriptie waar pauzes onvoldoende zijn."},
+                    {"id": "1.2.8", "name": "Media-alternatief (vooraf opgenomen)", "description": "Zorg voor een volledig tekstalternatief voor vooraf opgenomen gesynchroniseerde media."},
+                    {"id": "1.2.9", "name": "Louter-geluid (live)", "description": "Zorg voor een transcript of equivalent voor live louter-geluid content."},
+                    {"id": "1.3.7", "name": "Verminderde beweging (nieuw in 2.2)", "description": "Zorg dat gebruikers beweging/animatie kunnen verminderen als dit ongemak veroorzaakt."},
+                    {"id": "1.4.6", "name": "Contrast (verbeterd)", "description": "Tekst en afbeeldingen van tekst moeten ten minste een contrastverhouding van 7:1 hebben (4.5:1 voor grote tekst)."},
+                    {"id": "1.4.7", "name": "Weinig of geen achtergrondgeluid", "description": "Achtergrondgeluiden moeten zacht zijn, uitschakelbaar, of ten minste 20 dB zachter dan voorgrondspraak."},
+                    {"id": "1.4.8", "name": "Visuele weergave", "description": "Sta gebruikers toe om de visuele weergave (kleuren, afstand, lettertype) aan te passen."},
+                    {"id": "1.4.9", "name": "Afbeeldingen van tekst (geen uitzondering)", "description": "Gebruik helemaal geen afbeeldingen van tekst."},
+                    {"id": "2.1.3", "name": "Toetsenbord (geen uitzondering)", "description": "Alle content en functionaliteit moeten zonder uitzondering met het toetsenbord te bedienen zijn."},
+                    {"id": "2.2.3", "name": "Geen timing", "description": "Geen tijdslimieten voor het voltooien van taken, tenzij essentieel."},
+                    {"id": "2.2.4", "name": "Onderbrekingen", "description": "Gebruikers moeten onderbrekingen kunnen uitstellen of onderdrukken."},
+                    {"id": "2.2.5", "name": "Herauthentiseren", "description": "Herauthentisering mag niet leiden tot gegevensverlies."},
+                    {"id": "2.2.6", "name": "Time-outs", "description": "Waarschuw gebruikers voor inactiviteit-time-outs die leiden tot gegevensverlies."},
+                    {"id": "2.3.2", "name": "Drie flitsen", "description": "Geen enkele content flitst meer dan 3 keer per seconde, zelfs niet op hogere niveaus."},
+                    {"id": "2.3.3", "name": "Animatie door interactie (nieuw in 2.2)", "description": "Zorg dat gebruikers animaties die door interacties worden geactiveerd kunnen uitschakelen."},
+                    {"id": "2.4.8", "name": "Locatie", "description": "Geef informatie over de locatie van de gebruiker binnen een website, zoals kruimelpaden."},
+                    {"id": "2.4.9", "name": "Linkdoel (alleen link)", "description": "Het doel van elke link moet identificeerbaar zijn uit de linktekst alleen."},
+                    {"id": "2.4.10", "name": "Sectiekoppen", "description": "Gebruik koppen om alle content te organiseren."},
+                    {"id": "2.4.11", "name": "Focusweergave (nieuw in 2.2)", "description": "De focusindicator moet zeer zichtbaar zijn en voldoen aan contrastvereisten."},
+                    {"id": "2.5.7", "name": "Slepen (nieuw in 2.2)", "description": "Zorg voor alternatieven voor acties die slepen vereisen."},
+                    {"id": "2.5.8", "name": "Doelgrootte (minimaal) (nieuw in 2.2)", "description": "Doelen moeten ten minste 24x24 CSS-pixels zijn met beperkte uitzonderingen."},
+                    {"id": "3.1.3", "name": "Ongebruikelijke woorden", "description": "Zorg voor definities of uitleg voor ongebruikelijke of technische termen."},
+                    {"id": "3.1.4", "name": "Afkortingen", "description": "Zorg voor de uitgeschreven versie of betekenis van afkortingen."},
+                    {"id": "3.1.5", "name": "Leesniveau", "description": "Content mag geen leesvaardigheid vereisen die geavanceerder is dan het niveau van de lagere school."},
+                    {"id": "3.1.6", "name": "Uitspraak", "description": "Zorg voor uitspraakbegeleiding voor woorden waarvan de betekenis afhangt van de uitspraak."},
+                    {"id": "3.2.5", "name": "Verandering op verzoek", "description": "Contextwijzigingen mogen alleen plaatsvinden wanneer de gebruiker hierom vraagt."},
+                    {"id": "3.3.5", "name": "Hulp", "description": "Zorg voor hulpmiddelen, zoals FAQ's, instructies of contactmogelijkheden."},
+                    {"id": "3.3.6", "name": "Foutpreventie (alle)", "description": "Voor alle formulieren, sta beoordeling, correctie en bevestiging toe voor verzending."}
+                ]
+            }
+        }
+    };
+
+    const imageDescriptions = {
+        "1.1.1": "Sportini logo",
+        "1.2.1": "A visual example for WCAG success criterion 1.2.1: Audio-only and Video-only (Prerecorded).",
+        "1.2.2": "A visual example for WCAG success criterion 1.2.2: Captions (Prerecorded).",
+        "1.2.3": "A visual example for WCAG success criterion 1.2.3: Audio Description or Media Alternative (Prerecorded).",
+        "1.3.1": "A visual example for WCAG success criterion 1.3.1: Info and Relationships.",
+        "1.3.2": "A visual example for WCAG success criterion 1.3.2: Meaningful Sequence.",
+        "1.3.3": "A visual example for WCAG success criterion 1.3.3: Sensory Characteristics.",
+        "1.3.4": "A visual example for WCAG success criterion 1.3.4: Orientation.",
+        "1.3.5": "A visual example for WCAG success criterion 1.3.5: Identify Input Purpose.",
+        "1.4.1": "A visual example for WCAG success criterion 1.4.1: Use of Color.",
+        "1.4.2": "A visual example for WCAG success criterion 1.4.2: Audio Control.",
+        "2.1.1": "A visual example for WCAG success criterion 2.1.1: Keyboard.",
+        "2.1.2": "A visual example for WCAG success criterion 2.1.2: No Keyboard Trap.",
+        "2.1.4": "A visual example for WCAG success criterion 2.1.4: Character Key Shortcuts.",
+        "2.2.1": "A visual example for WCAG success criterion 2.2.1: Timing Adjustable.",
+        "2.2.2": "A visual example for WCAG success criterion 2.2.2: Pause, Stop, Hide.",
+        "2.3.1": "A visual example for WCAG success criterion 2.3.1: Three Flashes or Below Threshold.",
+        "2.4.1": "A visual example for WCAG success criterion 2.4.1: Bypass Blocks.",
+        "2.4.2": "A visual example for WCAG success criterion 2.4.2: Page Titled.",
+        "2.4.3": "A visual example for WCAG success criterion 2.4.3: Focus Order.",
+        "2.4.4": "A visual example for WCAG success criterion 2.4.4: Link Purpose (In Context).",
+        "2.5.1": "A visual example for WCAG success criterion 2.5.1: Pointer Gestures.",
+        "2.5.2": "A visual example for WCAG success criterion 2.5.2: Pointer Cancellation.",
+        "2.5.3": "A visual example for WCAG success criterion 2.5.3: Label in Name.",
+        "2.5.4": "A visual example for WCAG success criterion 2.5.4: Motion Actuation.",
+        "3.1.1": "A visual example for WCAG success criterion 3.1.1: Language of Page.",
+        "3.2.1": "A visual example for WCAG success criterion 3.2.1: On Focus.",
+        "3.2.2": "A visual example for WCAG success criterion 3.2.2: On Input.",
+        "3.3.1": "A visual example for WCAG success criterion 3.3.1: Error Identification.",
+        "3.3.2": "A visual example for WCAG success criterion 3.3.2: Labels or Instructions.",
+        "4.1.1": "A visual example for WCAG success criterion 4.1.1: Parsing.",
+        "4.1.2": "A visual example for WCAG success criterion 4.1.2: Name, Role, Value.",
+        "4.1.3": "A visual example for WCAG success criterion 4.1.3: Status Messages.",
+        "1.2.4": "A visual example for WCAG success criterion 1.2.4: Captions (Live).",
+        "1.2.5": "A visual example for WCAG success criterion 1.2.5: Audio Description (Prerecorded).",
+        "1.3.6": "A visual example for WCAG success criterion 1.3.6: Identify Purpose.",
+        "1.4.3": "A visual example for WCAG success criterion 1.4.3: Contrast (Minimum).",
+        "1.4.4": "A visual example for WCAG success criterion 1.4.4: Resize Text.",
+        "1.4.5": "A visual example for WCAG success criterion 1.4.5: Images of Text.",
+        "1.4.10": "A visual example for WCAG success criterion 1.4.10: Reflow.",
+        "1.4.11": "A visual example for WCAG success criterion 1.4.11: Non-text Contrast.",
+        "1.4.12": "A visual example for WCAG success criterion 1.4.12: Text Spacing.",
+        "1.4.13": "A visual example for WCAG success criterion 1.4.13: Content on Hover or Focus.",
+        "2.4.5": "A visual example for WCAG success criterion 2.4.5: Multiple Ways.",
+        "2.4.6": "A visual example for WCAG success criterion 2.4.6: Headings and Labels.",
+        "2.4.7": "A visual example for WCAG success criterion 2.4.7: Focus Visible.",
+        "2.5.5": "A visual example for WCAG success criterion 2.5.5: Target Size (Enhanced in 2.2).",
+        "2.5.6": "A visual example for WCAG success criterion 2.5.6: Concurrent Input Mechanisms.",
+        "3.1.2": "A visual example for WCAG success criterion 3.1.2: Language of Parts.",
+        "3.2.3": "A visual example for WCAG success criterion 3.2.3: Consistent Navigation.",
+        "3.2.4": "A visual example for WCAG success criterion 3.2.4: Consistent Identification.",
+        "3.3.3": "A visual example for WCAG success criterion 3.3.3: Error Suggestion.",
+        "3.3.4": "A visual example for WCAG success criterion 3.3.4: Error Prevention (Legal, Financial, Data).",
+        "3.3.7": "A visual example for WCAG success criterion 3.3.7: Redundant Entry (new in 2.2).",
+        "3.3.8": "A visual example for WCAG success criterion 3.3.8: Accessible Authentication (new in 2.2).",
+        "1.2.6": "A visual example for WCAG success criterion 1.2.6: Sign Language (Prerecorded).",
+        "1.2.7": "A visual example for WCAG success criterion 1.2.7: Extended Audio Description (Prerecorded).",
+        "1.2.8": "A visual example for WCAG success criterion 1.2.8: Media Alternative (Prerecorded).",
+        "1.2.9": "A visual example for WCAG success criterion 1.2.9: Audio-only (Live).",
+        "1.3.7": "A visual example for WCAG success criterion 1.3.7: Reduced Motion (new in 2.2).",
+        "1.4.6": "A visual example for WCAG success criterion 1.4.6: Contrast (Enhanced).",
+        "1.4.7": "A visual example for WCAG success criterion 1.4.7: Low or No Background Audio.",
+        "1.4.8": "A visual example for WCAG success criterion 1.4.8: Visual Presentation.",
+        "1.4.9": "A visual example for WCAG success criterion 1.4.9: Images of Text (No Exception).",
+        "2.1.3": "A visual example for WCAG success criterion 2.1.3: Keyboard (No Exception).",
+        "2.2.3": "A visual example for WCAG success criterion 2.2.3: No Timing.",
+        "2.2.4": "A visual example for WCAG success criterion 2.2.4: Interruptions.",
+        "2.2.5": "A visual example for WCAG success criterion 2.2.5: Re-authenticating.",
+        "2.2.6": "A visual example for WCAG success criterion 2.2.6: Timeouts.",
+        "2.3.2": "A visual example for WCAG success criterion 2.3.2: Three Flashes.",
+        "2.3.3": "A visual example for WCAG success criterion 2.3.3: Animation from Interactions (new in 2.2).",
+        "2.4.8": "A visual example for WCAG success criterion 2.4.8: Location.",
+        "2.4.9": "A visual example for WCAG success criterion 2.4.9: Link Purpose (Link Only).",
+        "2.4.10": "A visual example for WCAG success criterion 2.4.10: Section Headings.",
+        "2.4.11": "A visual example for WCAG success criterion 2.4.11: Focus Appearance (new in 2.2).",
+        "2.5.7": "A visual example for WCAG success criterion 2.5.7: Dragging Movements (new in 2.2).",
+        "2.5.8": "A visual example for WCAG success criterion 2.5.8: Target Size (Minimum) (new in 2.2).",
+        "3.1.3": "A visual example for WCAG success criterion 3.1.3: Unusual Words.",
+        "3.1.4": "A visual example for WCAG success criterion 3.1.4: Abbreviations.",
+        "3.1.5": "A visual example for WCAG success criterion 3.1.5: Reading Level.",
+        "3.1.6": "A visual example for WCAG success criterion 3.1.6: Pronunciation.",
+        "3.2.5": "A visual example for WCAG success criterion 3.2.5: Change on Request.",
+        "3.3.5": "A visual example for WCAG success criterion 3.3.5: Help.",
+        "3.3.6": "A visual example for WCAG success criterion 3.3.6: Error Prevention (All)."
+    };
+    
+    let currentLanguage = localStorage.getItem('wcagLanguage') || 'en';
+    let savedState = JSON.parse(localStorage.getItem('wcagChecklistState')) || {};
+
+    const resetModal = document.getElementById('reset-modal');
+    const resetModalText = document.getElementById('modal-text');
+    const confirmButton = document.getElementById('confirm-reset-button');
+    const cancelButton = document.getElementById('cancel-reset-button');
+    
+    const imageModalOverlay = document.createElement('div');
+    imageModalOverlay.classList.add('image-modal-overlay');
+    imageModalOverlay.innerHTML = `
+        <div class="image-modal-content">
+            <img src="" alt="">
+            <button class="close-button">&times;</button>
+        </div>
+    `;
+    document.body.appendChild(imageModalOverlay);
+    
+    const imageModalImage = imageModalOverlay.querySelector('img');
+    const imageCloseButton = imageModalOverlay.querySelector('.close-button');
+
+    const showResetModal = (message) => {
+        resetModalText.textContent = message;
+        resetModal.style.display = 'flex';
+    };
+
+    const hideResetModal = () => {
+        resetModal.style.display = 'none';
+    };
+    
+    const showImageModal = (src, alt) => {
+        imageModalImage.src = src;
+        imageModalImage.alt = alt;
+        imageModalOverlay.classList.add('active');
+    };
+
+    const hideImageModal = () => {
+        imageModalOverlay.classList.remove('active');
+    };
+
+    const translatePage = (lang) => {
+        document.getElementById('lang-toggle-button').textContent = lang === 'en' ? 'NL' : 'EN';
+        document.getElementById('reset-button').textContent = content[lang].resetButton;
+        document.querySelector('h1').textContent = content[lang].title;
+        document.querySelector('header p').textContent = content[lang].description;
+        document.querySelector('#level-a h2').textContent = content[lang].levelAHeading;
+        document.querySelector('#level-aa h2').textContent = content[lang].levelAAHeading;
+        document.querySelector('#level-aaa h2').textContent = content[lang].levelAAAHeading;
+        document.querySelector('footer p').innerHTML = content[lang].footerText;
+        confirmButton.textContent = content[lang].confirm;
+        cancelButton.textContent = content[lang].cancel;
+    };
+    
+    // New function to update the progress bars
+const updateProgressBars = () => {
+    const levels = ['a', 'aa', 'aaa'];
+    levels.forEach(level => {
+        const totalItems = content[currentLanguage].items[`level${level.toUpperCase()}`].length;
+        const checkedItems = document.querySelectorAll(`#level-${level} .checklist li.pass`).length;
+        const percentage = totalItems > 0 ? (checkedItems / totalItems) * 100 : 0;
+        const progressBar = document.getElementById(`progress-${level}`);
+        const progressText = document.getElementById(`progress-text-${level}`);
+
+        if (progressBar) {
+            progressBar.style.width = `${percentage}%`;
+        }
+
+        if (progressText) {
+            progressText.textContent = `${checkedItems}/${totalItems} (${level.toUpperCase()})`;
+        }
+    });
+};
+
+    const createChecklist = (level, items) => {
+        const listContainer = document.querySelector(`#level-${level} .checklist`);
+        listContainer.innerHTML = '';
+        items.forEach(item => {
+            const state = savedState[item.id] || { checked: false, expanded: false };
+            const sanitizedId = item.id.replace(/\./g, '');
+            const imagePath = `images/${sanitizedId}.webp`;
+            
+            const imageAltText = imageDescriptions[item.id] || `A visual example for WCAG success criterion ${item.id}.`;
+            
+            const li = document.createElement('li');
+            li.setAttribute('data-item-id', item.id);
+            if (state.expanded) {
+                li.classList.add('expanded');
+            }
+            li.innerHTML = `
+                <div>
+                    <input type="checkbox" id="sc-${item.id}" ${state.checked ? 'checked' : ''}>
+                    <div>
+                        <h3>${item.id} <span class="item-name">${item.name}</span></h3>
+                        <p class="item-description">${item.description}</p>
+                    </div>
+                </div>
+                <button class="info-button">i</button>
+                <div class="expanded-content">
+                    <img src="${imagePath}" alt="${imageAltText}">
+                    <p><i>${imageAltText}</i></p>
+                </div>
+            `;
+            
+            const checkbox = li.querySelector('input[type="checkbox"]');
+            const infoButton = li.querySelector('.info-button');
+            const image = li.querySelector('img');
+
+            li.addEventListener('click', (e) => {
+                if (!e.target.closest('.info-button') && e.target !== image) {
+                    checkbox.checked = !checkbox.checked;
+                    savedState[item.id] = { ...state, checked: checkbox.checked };
+                    localStorage.setItem('wcagChecklistState', JSON.stringify(savedState));
+                    li.classList.toggle('pass', checkbox.checked);
+                    updateProgressBars();
+                }
+            });
+
+            infoButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                li.classList.toggle('expanded');
+                const isExpanded = li.classList.contains('expanded');
+                savedState[item.id] = { ...state, expanded: isExpanded };
+                localStorage.setItem('wcagChecklistState', JSON.stringify(savedState));
+            });
+            
+            image.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const altText = e.target.alt;
+                showImageModal(imagePath, altText);
+            });
+
+            if (state.checked) {
+                li.classList.add('pass');
+            }
+            listContainer.appendChild(li);
+        });
+    };
+
+    const resetChecklist = () => {
+        localStorage.clear();
+        location.reload();
+    };
+
+    const toggleLanguage = () => {
+        currentLanguage = currentLanguage === 'en' ? 'nl' : 'en';
+        localStorage.setItem('wcagLanguage', currentLanguage);
+        renderContent(currentLanguage);
+    };
+
+    const renderContent = (lang) => {
+        translatePage(lang);
+        createChecklist('a', content[lang].items.levelA);
+        createChecklist('aa', content[lang].items.levelAA);
+        createChecklist('aaa', content[lang].items.levelAAA);
+        updateProgressBars();
+    };
+
+    document.getElementById('reset-button').addEventListener('click', () => {
+        showResetModal(content[currentLanguage].resetButtonConfirmation);
+    });
+
+    confirmButton.addEventListener('click', resetChecklist);
+    cancelButton.addEventListener('click', hideResetModal);
+    imageCloseButton.addEventListener('click', hideImageModal);
+    
+    imageModalOverlay.addEventListener('click', (e) => {
+        if (e.target === imageModalOverlay) {
+            hideImageModal();
+        }
+    });
+
+    document.getElementById('lang-toggle-button').addEventListener('click', toggleLanguage);
+
+    let lastScrollY = window.scrollY;
+    const headerButtons = document.querySelector('.header-buttons');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > 100) {
+            // Scrolling down
+            headerButtons.classList.add('hidden');
+        } else {
+            // Scrolling up
+            headerButtons.classList.remove('hidden');
+        }
+        lastScrollY = window.scrollY;
+    });
+
+ 
+
+    renderContent(currentLanguage);
+});

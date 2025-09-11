@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG 2.2 Accessibility Checklist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./images/mademarketing.png" alt="">
+            <h1>WCAG 2.2 Accessibility Checklist</h1>
+            <p>A comprehensive checklist for WCAG 2.2 Success Criteria.</p>
+        </div>
+        <div class="header-buttons">
+            <button id="lang-toggle-button">NL</button>
+            <button id="reset-button">Reset</button>
+        </div>
+    </header>
+
+    <div class="progress-bars-container">
+    <div class="progress-bar-wrapper">
+        <div class="progress-bar" id="progress-a"></div>
+    </div>
+    <div class="progress-bar-wrapper">
+        <div class="progress-bar" id="progress-aa"></div>
+    </div>
+    <div class="progress-bar-wrapper">
+        <div class="progress-bar" id="progress-aaa"></div>
+    </div>
+</div>
+    <main>
+        <section id="level-a">
+            <h2 data-lang-key="levelAHeading">Level A</h2>
+            <ul class="checklist">
+                </ul>
+        </section>
+        <section id="level-aa">
+            <h2 data-lang-key="levelAAHeading">Level AA</h2>
+            <ul class="checklist">
+                </ul>
+        </section>
+        <section id="level-aaa">
+            <h2 data-lang-key="levelAAAHeading">Level AAA</h2>
+            <ul class="checklist">
+                </ul>
+        </section>
+    </main>
+ <div id="progress-text-container">
+        <div class="progress-text" id="progress-text-a"></div>
+        <div class="progress-text" id="progress-text-aa"></div>
+        <div class="progress-text" id="progress-text-aaa"></div>
+    </div>
+    <footer>
+        <p data-lang-key="footerText">&copy; 2024 WCAG Checklist</p>
+
+    <footer>
+        <p data-lang-key="footerText">&copy; 2024 WCAG Checklist</p>
+    </footer>
+
+    <div id="reset-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-text"></p>
+            <div class="modal-buttons">
+                <button id="confirm-reset-button">Confirm</button>
+                <button id="cancel-reset-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
