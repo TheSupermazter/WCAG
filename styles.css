@@ -46,6 +46,10 @@ header {
 header h1, header p {
     margin-top: 10px;
 }
+
+header img{
+    margin-top: 30px;
+}
 #reset-button, #lang-toggle-button {
     background-color: #fa3d4f;
     color: white;

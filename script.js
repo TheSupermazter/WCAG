@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "3.3.6": "Laat gebruikers altijd hun invoer controleren, corrigeren en bevestigen voor verzending. // Toon een samenvatting van de invoer en een bevestigingsoptie voor verzending."
     };
     
-    let currentLanguage = localStorage.getItem('wcagLanguage') || 'en';
+    let currentLanguage = localStorage.getItem('wcagLanguage') || 'nl';
     let savedState = JSON.parse(localStorage.getItem('wcagChecklistState')) || {};
 
     const resetModal = document.getElementById('reset-modal');
