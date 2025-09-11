@@ -342,3 +342,7 @@ h1, h2 {
 .header-buttons.hidden {
     transform: translateY(-100px); /* Move the buttons up and out of view */
 }
+
+a {
+    color: rgb(163, 163, 163);
+}
