@@ -346,3 +346,27 @@ h1, h2 {
 a {
     color: rgb(163, 163, 163);
 }
+
+/* Media Queries */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 0.5rem;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .header-content {
+        width: 100%;
+        text-align: center;
+    }
+    .header-buttons {
+        right: 0.5rem;
+        top: 0.5rem;
+        gap: 5px;
+    }
+    header h1, header p {
+        font-size: 1.1rem;
+        word-break: break-word;
+    }
+}
