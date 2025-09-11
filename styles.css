@@ -44,7 +44,7 @@ header {
     flex-grow: 1;
 }
 header h1, header p {
-    margin: 0;
+    margin-top: 10px;
 }
 #reset-button, #lang-toggle-button {
     background-color: #fa3d4f;
