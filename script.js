@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
             items: {
                 levelA: [
                     {"id": "1.1.1", "name": "Niet-tekstuele content", "description": "Zorg voor tekstalternatieven voor afbeeldingen, iconen en andere niet-tekstuele content, zodat ondersteunende technologieën deze kunnen weergeven."},
-                    {"id": "1.2.1", "name": "Louter-geluid en louter-videobeeld (vooraf opgenomen)", "description": "Zorg voor een transcript voor vooraf opgenomen audio. Zorg voor een tekst- of audioalternatief voor vooraf opgenomen video."},
+                    {"id": "1.2.1", "name": "Audio-only en video-only (vooraf opgenomen)", "description": "Zorg voor een transcript voor vooraf opgenomen audio. Zorg voor een tekst- of audioalternatief voor vooraf opgenomen video."},
                     {"id": "1.2.2", "name": "Ondertiteling (vooraf opgenomen)", "description": "Voeg ondertiteling toe aan vooraf opgenomen video's met audio, zodat dove of slechthorende gebruikers deze kunnen begrijpen."},
-                    {"id": "1.2.3", "name": "Audiodescriptie of media-alternatief (vooraf opgenomen)", "description": "Zorg voor audiodescriptie of een alternatief voor louter-videobeeld content."},
+                    {"id": "1.2.3", "name": "Audiodescriptie of media-alternatief (vooraf opgenomen)", "description": "Zorg voor audiodescriptie of een alternatief voor video-only content."},
                     {"id": "1.3.1", "name": "Info en relaties", "description": "Zorg ervoor dat koppen, lijsten, tabellen en andere structuren de juiste semantische opmaak gebruiken."},
                     {"id": "1.3.2", "name": "Betekenisvolle volgorde", "description": "Content moet worden gepresenteerd in een logische leesvolgorde die met ondersteunende technologieën werkt."},
                     {"id": "1.3.3", "name": "Sensorische kenmerken", "description": "Instructies mogen niet alleen afhankelijk zijn van vorm, grootte, geluid of visuele locatie (bijv. 'klik op de rode knop')."},
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     {"id": "1.2.6", "name": "Gebarentaal (vooraf opgenomen)", "description": "Zorg voor gebarentaalinterpretatie voor alle vooraf opgenomen audiocontent."},
                     {"id": "1.2.7", "name": "Uitgebreide audiodescriptie (vooraf opgenomen)", "description": "Zorg voor uitgebreide audiodescriptie waar pauzes onvoldoende zijn."},
                     {"id": "1.2.8", "name": "Media-alternatief (vooraf opgenomen)", "description": "Zorg voor een volledig tekstalternatief voor vooraf opgenomen gesynchroniseerde media."},
-                    {"id": "1.2.9", "name": "Louter-geluid (live)", "description": "Zorg voor een transcript of equivalent voor live louter-geluid content."},
+                    {"id": "1.2.9", "name": "Audio-only (live)", "description": "Zorg voor een transcript of equivalent voor live audio-only content."},
                     {"id": "1.3.7", "name": "Verminderde beweging (nieuw in 2.2)", "description": "Zorg dat gebruikers beweging/animatie kunnen verminderen als dit ongemak veroorzaakt."},
                     {"id": "1.4.6", "name": "Contrast (verbeterd)", "description": "Tekst en afbeeldingen van tekst moeten ten minste een contrastverhouding van 7:1 hebben (4.5:1 voor grote tekst)."},
                     {"id": "1.4.7", "name": "Weinig of geen achtergrondgeluid", "description": "Achtergrondgeluiden moeten zacht zijn, uitschakelbaar, of ten minste 20 dB zachter dan voorgrondspraak."},
