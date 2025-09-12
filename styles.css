@@ -80,10 +80,11 @@ main {
 section {
     margin-bottom: 2rem;
 }
-h1, h2 {
+header h1, h2 {
     color: #ffffff;
-    border-bottom: 2px solid #355167;
+    border-bottom: 0px solid #355167;
     padding-bottom: 0.5rem;
+    padding-top: 0.7rem;
 }
 .checklist {
     list-style: none;
@@ -315,6 +316,14 @@ h1, h2 {
     font-size: 1rem;
     font-weight: bold;
     color: #ffffff;
+    cursor: pointer;
+    transition: color 0.2s, opacity 0.2s;
+}
+.progress-text.disabled {
+    color: #888 !important;
+    opacity: 0.5;
+    text-decoration: line-through;
+    pointer-events: auto;
 }
 
 /* Responsive Styles for Progress Box */
@@ -351,26 +360,83 @@ a {
     color: rgb(163, 163, 163);
 }
 
-/* Media Queries */
-@media (max-width: 600px) {
-    header {
-        padding: 1rem 0.5rem;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100vw;
-        box-sizing: border-box;
-    }
-    .header-content {
-        width: 100%;
-        text-align: center;
-    }
-    .header-buttons {
-        right: 0.5rem;
-        top: 0.5rem;
-        gap: 5px;
-    }
-    header h1, header p {
-        font-size: 1.1rem;
-        word-break: break-word;
-    }
+.cd-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 35px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    user-select: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border: 2px solid #fff;
+}
+.cd-label.D {
+    background: #00b4bd; /* light blue */
+    color: #ffffff;
+}
+.cd-label.C {
+    background: #616161; /* sage */
+    color: #ffffff;
+}
+.cd-note {
+    margin-top: 1em;
+    color: #aaa;
+    font-size: 0.8em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* --- Sticky and collapsible section headings --- */
+.sticky-section-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #31465c;
+    border-bottom: 2px solid #355167;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.sticky-section-header.collapsed {
+    border-bottom: none;
+    background: #32455a;
+    opacity: 0.95;
+    border-radius: 10px;
+}
+.sticky-section-header h2 {
+    margin: 0;
+    display: inline-block;
+    font-size: 1.3rem;
+    vertical-align: middle;
+}   
+.sticky-section-header .collapse-arrow {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    transition: transform 0.2s;
+    display: inline-block;
+    color: #fa3d4f; /* Use a visible accent color */
+    font-weight: bold;
+}
+.sticky-section-header.collapsed .collapse-arrow {
+    transform: rotate(-90deg);
+}
+.section-collapsible-content {
+    transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+    max-height: 10000px; /* Increased to avoid cutting off long lists */
+    opacity: 1;
+    overflow: hidden;
+}
+.section-collapsible-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
 }

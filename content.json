@@ -1,0 +1,514 @@
+{
+  "levelA": [
+    {
+      "id": "1.1.1",
+      "name": "Non-text Content",
+      "description": "Provide text alternatives for images, icons, and other non-text content so assistive technologies can present them."
+    },
+    {
+      "id": "1.2.1",
+      "name": "Audio-only and Video-only (Prerecorded)",
+      "description": "Provide alternatives for audio-only and video-only content."
+    },
+    {
+      "id": "1.2.2",
+      "name": "Captions (Prerecorded)",
+      "description": "Provide captions for all prerecorded audio content in synchronized media."
+    },
+    {
+      "id": "1.2.3",
+      "name": "Audio Description or Media Alternative (Prerecorded)",
+      "description": "Provide audio description or a media alternative for video content."
+    },
+    {
+      "id": "1.3.1",
+      "name": "Info and Relationships",
+      "description": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text."
+    },
+    {
+      "id": "1.3.2",
+      "name": "Meaningful Sequence",
+      "description": "When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined."
+    },
+    {
+      "id": "1.3.3",
+      "name": "Sensory Characteristics",
+      "description": "Instructions provided for understanding and operating content do not rely solely on sensory characteristics."
+    },
+    {
+      "id": "1.3.4",
+      "name": "Orientation",
+      "description": "Content does not restrict its view and operation to a single display orientation, such as portrait or landscape."
+    },
+    {
+      "id": "1.3.5",
+      "name": "Identify Input Purpose",
+      "description": "The purpose of each input field collecting information about the user can be programmatically determined."
+    },
+    {
+      "id": "1.4.1",
+      "name": "Use of Color",
+      "description": "Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element."
+    },
+    {
+      "id": "1.4.2",
+      "name": "Audio Control",
+      "description": "If any audio on a web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level."
+    },
+    {
+      "id": "2.1.1",
+      "name": "Keyboard",
+      "description": "All functionality of the content is operable through a keyboard interface."
+    },
+    {
+      "id": "2.1.2",
+      "name": "No Keyboard Trap",
+      "description": "If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface."
+    },
+    {
+      "id": "2.1.4",
+      "name": "Character Key Shortcuts",
+      "description": "If a keyboard shortcut is implemented in content using only letter (including upper- and lower-case letters), punctuation, number, or symbol characters, then at least one of the following is true: a mechanism is available to turn the shortcut off, remap the shortcut, or only active on focus."
+    },
+    {
+      "id": "2.2.1",
+      "name": "Timing Adjustable",
+      "description": "For each time limit that is set by the content, the user can turn off, adjust, or extend the time limit."
+    },
+    {
+      "id": "2.2.2",
+      "name": "Pause, Stop, Hide",
+      "description": "For moving, blinking, scrolling, or auto-updating information, users can pause, stop, or hide it."
+    },
+    {
+      "id": "2.3.1",
+      "name": "Three Flashes or Below Threshold",
+      "description": "Web pages do not contain anything that flashes more than three times in any one second period, or the flash is below the general flash and red flash thresholds."
+    },
+    {
+      "id": "2.4.1",
+      "name": "Bypass Blocks",
+      "description": "A mechanism is available to bypass blocks of content that are repeated on multiple web pages."
+    },
+    {
+      "id": "2.4.2",
+      "name": "Page Titled",
+      "description": "Web pages have titles that describe topic or purpose."
+    },
+    {
+      "id": "2.4.3",
+      "name": "Focus Order",
+      "description": "If a web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability."
+    },
+    {
+      "id": "2.4.4",
+      "name": "Link Purpose (In Context)",
+      "description": "The purpose of each link can be determined from the link text alone or from the link text together with its context."
+    },
+    {
+      "id": "2.5.1",
+      "name": "Pointer Gestures",
+      "description": "All functionality that uses multipoint or path-based gestures for operation can be operated with a single pointer without a path-based gesture."
+    },
+    {
+      "id": "2.5.2",
+      "name": "Pointer Cancellation",
+      "description": "For functionality that can be operated using a single pointer, at least one of the following is true: no down-event, abort or undo, up reversal, or essential."
+    },
+    {
+      "id": "2.5.3",
+      "name": "Label in Name",
+      "description": "For user interface components with labels that include text or images of text, the name contains the text that is presented visually."
+    },
+    {
+      "id": "2.5.4",
+      "name": "Motion Actuation",
+      "description": "Functionality that is operated by device or user motion can also be operated by user interface components, and responding to the motion can be disabled to prevent accidental actuation."
+    },
+    {
+      "id": "3.1.1",
+      "name": "Language of Page",
+      "description": "The default human language of each web page can be programmatically determined."
+    },
+    {
+      "id": "3.2.1",
+      "name": "On Focus",
+      "description": "When any user interface component receives focus, it does not initiate a change of context."
+    },
+    {
+      "id": "3.2.2",
+      "name": "On Input",
+      "description": "Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component."
+    },
+    {
+      "id": "3.3.1",
+      "name": "Error Identification",
+      "description": "If an input error is detected, it is identified and described to the user in text."
+    },
+    {
+      "id": "3.3.2",
+      "name": "Labels or Instructions",
+      "description": "Labels or instructions are provided when content requires user input."
+    },
+    {
+      "id": "4.1.1",
+      "name": "Parsing",
+      "description": "In content implemented using markup languages, elements have complete start and end tags, elements are nested according to their specifications, elements do not contain duplicate attributes, and any IDs are unique."
+    },
+    {
+      "id": "4.1.2",
+      "name": "Name, Role, Value",
+      "description": "For all user interface components, the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies."
+    },
+    {
+      "id": "4.1.3",
+      "name": "Status Messages",
+      "description": "In content implemented using markup languages, status messages can be programmatically determined through role or properties so that they can be presented to the user by assistive technologies without receiving focus."
+    }
+  ],
+  "levelAA": [
+    {
+      "id": "1.2.4",
+      "name": "Captions (Live)",
+      "description": "Captions are provided for all live audio content in synchronized media."
+    },
+    {
+      "id": "1.2.5",
+      "name": "Audio Description (Prerecorded)",
+      "description": "Audio description is provided for all prerecorded video content in synchronized media."
+    },
+    {
+      "id": "1.3.6",
+      "name": "Identify Purpose",
+      "description": "In content implemented using markup languages, the purpose of User Interface Components, icons, and regions can be programmatically determined."
+    },
+    {
+      "id": "1.4.3",
+      "name": "Contrast (Minimum)",
+      "description": "Text and images of text have a contrast ratio of at least 4.5:1."
+    },
+    {
+      "id": "1.4.4",
+      "name": "Resize Text",
+      "description": "Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality."
+    },
+    {
+      "id": "1.4.5",
+      "name": "Images of Text",
+      "description": "If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text."
+    },
+    {
+      "id": "1.4.10",
+      "name": "Reflow",
+      "description": "Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for: Vertical scrolling content at a width equivalent to 320 CSS pixels; Horizontal scrolling content at a height equivalent to 256 CSS pixels."
+    },
+    {
+      "id": "1.4.11",
+      "name": "Non-text Contrast",
+      "description": "The visual presentation of user interface components and graphical objects have a contrast ratio of at least 3:1 against adjacent colors."
+    },
+    {
+      "id": "1.4.12",
+      "name": "Text Spacing",
+      "description": "No loss of content or functionality occurs by setting all of the following and by changing no other style property: Line height (line spacing) to at least 1.5 times the font size; Spacing following paragraphs to at least 2 times the font size; Letter spacing (tracking) to at least 0.12 times the font size; Word spacing to at least 0.16 times the font size."
+    },
+    {
+      "id": "1.4.13",
+      "name": "Content on Hover or Focus",
+      "description": "Where receiving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true: Dismissable, Hoverable, Persistent."
+    },
+    {
+      "id": "2.4.5",
+      "name": "Multiple Ways",
+      "description": "More than one way is available to locate a web page within a set of web pages except where the page is the result of, or a step in, a process."
+    },
+    {
+      "id": "2.4.6",
+      "name": "Headings and Labels",
+      "description": "Headings and labels describe topic or purpose."
+    },
+    {
+      "id": "2.4.7",
+      "name": "Focus Visible",
+      "description": "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible."
+    },
+    {
+      "id": "2.5.5",
+      "name": "Target Size (Enhanced)",
+      "description": "The size of the target for pointer inputs is at least 44 by 44 CSS pixels except where the target is equivalent, inline, user agent controlled, essential, or a spacing exception applies."
+    },
+    {
+      "id": "2.5.6",
+      "name": "Concurrent Input Mechanisms",
+      "description": "Web content does not restrict use of input modalities available on a platform except where necessary."
+    },
+    {
+      "id": "3.1.2",
+      "name": "Language of Parts",
+      "description": "The human language of each passage or phrase in the content can be programmatically determined except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text."
+    },
+    {
+      "id": "3.2.3",
+      "name": "Consistent Navigation",
+      "description": "Navigational mechanisms that are repeated on multiple web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user."
+    },
+    {
+      "id": "3.2.4",
+      "name": "Consistent Identification",
+      "description": "Components that have the same functionality within a set of web pages are identified consistently."
+    },
+    {
+      "id": "3.3.3",
+      "name": "Error Suggestion",
+      "description": "If an input error is detected and suggestions for correction are known, then the suggestions are provided to the user."
+    },
+    {
+      "id": "3.3.4",
+      "name": "Error Prevention (Legal, Financial, Data)",
+      "description": "For web pages that require the user to submit information, the user is allowed to review, correct, and confirm before finalizing the submission."
+    },
+    {
+      "id": "3.3.7",
+      "name": "Redundant Entry",
+      "description": "Information previously entered by or provided to the user is either auto-populated or available for the user to select."
+    },
+    {
+      "id": "3.3.8",
+      "name": "Accessible Authentication (Minimum)",
+      "description": "A cognitive function test is not required for any step in an authentication process, or a mechanism is available to assist the user."
+    }
+  ],
+  "levelAAA": [
+    {
+      "id": "1.2.6",
+      "name": "Sign Language (Prerecorded)",
+      "description": "Sign language interpretation is provided for all prerecorded audio content in synchronized media."
+    },
+    {
+      "id": "1.2.7",
+      "name": "Extended Audio Description (Prerecorded)",
+      "description": "Where pauses in foreground audio are insufficient to allow audio descriptions to convey the sense of the video, extended audio description is provided for all prerecorded video content in synchronized media."
+    },
+    {
+      "id": "1.2.8",
+      "name": "Media Alternative (Prerecorded)",
+      "description": "An alternative for time-based media is provided for all prerecorded synchronized media and for all prerecorded video-only media."
+    },
+    {
+      "id": "1.2.9",
+      "name": "Audio-only (Live)",
+      "description": "An alternative for live audio-only content is provided."
+    },
+    {
+      "id": "1.3.7",
+      "name": "Redundant Entry",
+      "description": "Information previously entered by or provided to the user is either auto-populated or available for the user to select."
+    },
+    {
+      "id": "1.4.6",
+      "name": "Contrast (Enhanced)",
+      "description": "The visual presentation of text and images of text has a contrast ratio of at least 7:1."
+    },
+    {
+      "id": "1.4.7",
+      "name": "Low or No Background Audio",
+      "description": "For prerecorded audio-only content that contains primarily speech, at least one of the following is true: No background, Turn off, 20 dB."
+    },
+    {
+      "id": "1.4.8",
+      "name": "Visual Presentation",
+      "description": "For the visual presentation of blocks of text, a mechanism is available to achieve the following: Foreground and background colors can be selected by the user, width is no more than 80 characters, text is not justified, line spacing is at least 1.5, and text can be resized without assistive technology up to 200 percent."
+    },
+    {
+      "id": "1.4.9",
+      "name": "Images of Text (No Exception)",
+      "description": "Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed."
+    },
+    {
+      "id": "2.1.3",
+      "name": "Keyboard (No Exception)",
+      "description": "All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes."
+    },
+    {
+      "id": "2.2.3",
+      "name": "No Timing",
+      "description": "Timing is not an essential part of the event or activity presented by the content."
+    },
+    {
+      "id": "2.2.4",
+      "name": "Interruptions",
+      "description": "Interruptions can be postponed or suppressed by the user, except interruptions involving an emergency."
+    },
+    {
+      "id": "2.2.5",
+      "name": "Re-authenticating",
+      "description": "When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating."
+    },
+    {
+      "id": "2.2.6",
+      "name": "Timeouts",
+      "description": "Users are warned of timeouts that may result in data loss, unless the data is preserved for more than 20 hours of user inactivity."
+    },
+    {
+      "id": "2.3.2",
+      "name": "Three Flashes",
+      "description": "Web pages do not contain anything that flashes more than three times in any one second period."
+    },
+    {
+      "id": "2.3.3",
+      "name": "Animation from Interactions",
+      "description": "Motion animation triggered by interaction can be disabled, unless the animation is essential to the functionality or the information being conveyed."
+    },
+    {
+      "id": "2.4.8",
+      "name": "Location",
+      "description": "Information about the user's location within a set of web pages is available."
+    },
+    {
+      "id": "2.4.9",
+      "name": "Link Purpose (Link Only)",
+      "description": "A mechanism is available to allow the purpose of each link to be identified from link text alone."
+    },
+    {
+      "id": "2.4.10",
+      "name": "Section Headings",
+      "description": "Section headings are used to organize the content."
+    },
+    {
+      "id": "2.4.11",
+      "name": "Focus Appearance",
+      "description": "When a user interface component receives keyboard focus, the focus indicator is clearly visible."
+    },
+    {
+      "id": "2.5.7",
+      "name": "Dragging Movements",
+      "description": "All functionality that uses a dragging movement for operation can be achieved by a single pointer without dragging, unless dragging is essential."
+    },
+    {
+      "id": "2.5.8",
+      "name": "Target Size (Minimum)",
+      "description": "The size of the target for pointer inputs is at least 24 by 24 CSS pixels except where the target is equivalent, inline, user agent controlled, essential, or a spacing exception applies."
+    },
+    {
+      "id": "3.1.3",
+      "name": "Unusual Words",
+      "description": "A mechanism is available for identifying specific definitions of words or phrases used in an unusual or restricted way, including idioms and jargon."
+    },
+    {
+      "id": "3.1.4",
+      "name": "Abbreviations",
+      "description": "A mechanism for identifying the expanded form or meaning of abbreviations is available."
+    },
+    {
+      "id": "3.1.5",
+      "name": "Reading Level",
+      "description": "When text requires reading ability more advanced than the lower secondary education level, supplemental content or a version that does not require reading ability more advanced than the lower secondary education level is available."
+    },
+    {
+      "id": "3.1.6",
+      "name": "Pronunciation",
+      "description": "A mechanism is available for identifying specific pronunciation of words where meaning of the words, in context, is ambiguous without knowing the pronunciation."
+    },
+    {
+      "id": "3.2.5",
+      "name": "Change on Request",
+      "description": "Changes of context are initiated only by user request or a mechanism is available to turn off such changes."
+    },
+    {
+      "id": "3.3.5",
+      "name": "Help",
+      "description": "Context-sensitive help is available."
+    },
+    {
+      "id": "3.3.6",
+      "name": "Error Prevention (All)",
+      "description": "For web pages that require the user to submit information, the user is allowed to review, correct, and confirm before finalizing the submission."
+    }
+  ],
+  "imageDescriptions": {
+    "1.1.1": "Zorg dat je bij alle afbeeldingen een alt-tekst toevoegt en aria-labels gebruikt voor iconen. // Gebruik het HTML-attribuut alt voor &lt;img&gt; en aria-label voor &lt;svg&gt; of &lt;i&gt; iconen.",
+    "1.2.1": "Als je audio of video gebruikt, zorg dan voor een transcript of tekstalternatief. // Voeg een transcript toe in HTML, bijvoorbeeld in een &lt;details&gt; of &lt;div&gt; onder de media.",
+    "1.2.2": "Zorg dat je ondertiteling toevoegt aan alle video's met audio. // Gebruik &lt;track kind='captions'&gt; binnen &lt;video&gt; voor ondertiteling.",
+    "1.2.3": "Voeg een audiodescriptie of media-alternatief toe voor video-inhoud. // Gebruik &lt;track kind='descriptions'&gt; binnen &lt;video&gt; voor audiodescriptie.",
+    "1.3.1": "Zorg ervoor dat informatie, structuur en relaties in de presentatie beschikbaar zijn in tekst. // Gebruik semantische HTML-elementen zoals &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;.",
+    "1.3.2": "Zorg voor een logische volgorde van inhoud die de betekenis ervan behoudt. // Gebruik geneste lijsten, tabellen met koppen, en zorg voor een correcte volgorde van heading-tags (&lt;h1&gt; tot &lt;h6&gt;).",
+    "1.3.3": "Geef instructies die niet alleen op zintuiglijke kenmerken zijn gebaseerd. // Vermijd zinnen als 'klik op de groene knop' en beschrijf in plaats daarvan de actie.",
+    "1.3.4": "Beperk de afhankelijkheid van een enkele weergave-orientatie. // Zorg dat inhoud zowel in portret- als landschapsmodus goed wordt weergegeven.",
+    "1.3.5": "Geef elke invoerveld een duidelijk doel. // Gebruik label-elementen en aria-labels om het doel van invoervelden te beschrijven.",
+    "1.4.1": "Gebruik niet alleen kleur om informatie over te brengen. // Zorg voor tekstlabels of iconen die de betekenis van kleurcodering aanvullen.",
+    "1.4.2": "Zorg voor bedieningsmechanismen voor audio die automatisch afspeelt. // Voeg een pauze- of stopknop toe voor audio die langer dan 3 seconden speelt.",
+    "2.1.1": "Zorg dat alle functionaliteit via een toetsenbord bediend kan worden. // Test met Tab, Shift+Tab, Enter, Space, en de pijltoetsen.",
+    "2.1.2": "Zorg dat de focus van het toetsenbord naar elk onderdeel kan bewegen en weer terug. // Gebruik alleen toetsenbordnavigatie (geen muis) om de pagina te verkennen.",
+    "2.1.4": "Bied een manier om sneltoetsen in te schakelen of uit te schakelen. // Zorg voor een instelling in de gebruikersinterface om sneltoetsen te beheren.",
+    "2.2.1": "Geef gebruikers de mogelijkheid om tijdslimieten aan te passen of uit te schakelen. // Voeg opties toe om de tijdslimiet te verlengen of te pauzeren.",
+    "2.2.2": "Zorg dat gebruikers bewegende of knipperende informatie kunnen pauzeren of stoppen. // Voeg duidelijke knoppen toe voor pauzeren en stoppen.",
+    "2.3.1": "Voorkom dat er meer dan drie keer per seconde flitsen optreden. // Test op flitsen met een frequentie van meer dan 3 Hz en vermijd deze.",
+    "2.4.1": "Bied een mechanisme om herhalende blokken inhoud over meerdere pagina's heen te omzeilen. // Voeg een 'skip to content' link toe aan het begin van de pagina.",
+    "2.4.2": "Zorg voor beschrijvende titels voor webpagina's. // Gebruik unieke en informatieve titels voor elke pagina, zichtbaar in het browser-tabblad.",
+    "2.4.3": "Zorg voor een logische tabvolgorde die de betekenis en bruikbaarheid behoudt. // Test de tabvolgorde met een toetsenbord om de juiste volgorde te garanderen.",
+    "2.4.4": "Zorg dat de bedoeling van elke link duidelijk is, alleen uit de linktekst of uit de context. // Vermijd vage linkteksten zoals 'klik hier' of 'meer informatie'.",
+    "2.5.1": "Zorg dat alle functionaliteit met één aanwijzer kan worden bediend, zonder pad-gebaseerde gebaren. // Test met een muis of touchpad om te verifiëren.",
+    "2.5.2": "Bied alternatieven voor functionaliteit die een enkele aanwijzer vereist. // Zorg voor toetsenbordalternatieven of andere invoermethoden.",
+    "2.5.3": "Zorg dat de naam van UI-componenten de visueel gepresenteerde tekst bevat. // Controleer of label-elementen correct zijn gekoppeld aan hun invoervelden.",
+    "2.5.4": "Zorg dat beweging geactiveerde functionaliteit ook via UI-componenten bediend kan worden. // Voeg knoppen of schakelaars toe als alternatief voor beweging.",
+    "3.1.1": "Stel de standaardtaal van de webpagina in met het lang-attribuut in de html-tag. // Voorbeeld: &lt;html lang='nl'&gt;.",
+    "3.2.1": "Zorg dat het ontvangen van focus geen contextwijziging initieert. // Test door met de Tab-toets naar een element te navigeren.",
+    "3.2.2": "Zorg dat het wijzigen van instellingen geen automatische contextwijziging veroorzaakt. // Geef gebruikers een waarschuwing als dit gebeurt.",
+    "3.3.1": "Identificeer en beschrijf invoerfouten aan de gebruiker in tekst. // Gebruik ARIA-rollen en -attributen om foutmeldingen aan te geven.",
+    "3.3.2": "Bied labels of instructies aan wanneer inhoud gebruikersinvoer vereist. // Gebruik duidelijke en beknopte taal voor instructies.",
+    "4.1.1": "Zorg voor correcte en volledige markup volgens de specificaties. // Gebruik een validator om de markup van de inhoud te controleren.",
+    "4.1.2": "Zorg dat naam en rol van alle UI-componenten programmeerbaar bepaald kunnen worden. // Gebruik ARIA-labels en -rollen waar nodig.",
+    "4.1.3": "Zorg dat statusberichten programmeerbaar bepaald kunnen worden. // Gebruik ARIA-live regions om statusupdates aan te geven.",
+    "1.2.4": "Voorzie live video van ondertiteling. // Gebruik live captioning tools of een menselijke ondertitelaar voor live-uitzendingen.",
+    "1.2.5": "Voeg audiodescriptie toe aan alle vooraf opgenomen video's. // Gebruik een extra audiotrack of voice-over om visuele informatie te beschrijven.",
+    "1.3.6": "Zorg dat het doel van UI-componenten, iconen en regio's programmeerbaar bepaald kan worden. // Gebruik aria-labels en semantische HTML.",
+    "1.4.3": "Zorg voor voldoende contrast tussen tekst en achtergrond (minimaal 4.5:1). // Gebruik tools zoals de WCAG Contrast Checker.",
+    "1.4.4": "Laat tekst tot 200% vergroten zonder verlies van inhoud of functionaliteit. // Test met browser zoom en vergroot tekst.",
+    "1.4.5": "Gebruik tekst in plaats van afbeeldingen van tekst, tenzij essentieel. // Vervang afbeeldingen van tekst door echte tekst waar mogelijk.",
+    "1.4.10": "Zorg dat inhoud zonder horizontaal scrollen leesbaar blijft op smalle schermen. // Test op mobiel en verklein het browservenster.",
+    "1.4.11": "Zorg voor voldoende contrast voor UI-componenten en grafische objecten (minimaal 3:1). // Controleer knoppen, formuliervelden en iconen.",
+    "1.4.12": "Laat gebruikers tekstafstand aanpassen zonder verlies van inhoud. // Test met aangepaste CSS voor line-height, letter-spacing, etc.",
+    "1.4.13": "Zorg dat extra content op hover of focus eenvoudig te sluiten is en toegankelijk blijft. // Gebruik tooltips en popovers die met Esc gesloten kunnen worden.",
+    "2.4.5": "Bied meerdere manieren om een pagina te vinden, zoals een zoekfunctie, sitemap of menu. // Voeg een zoekveld en duidelijke navigatie toe.",
+    "2.4.6": "Gebruik duidelijke koppen en labels die het onderwerp of doel beschrijven. // Gebruik semantische heading-structuur.",
+    "2.4.7": "Zorg dat het toetsenbordfocus zichtbaar is. // Gebruik CSS :focus-stijlen voor interactieve elementen.",
+    "2.5.5": "Maak klikbare doelen groot genoeg (minimaal 44x44px). // Vergroot knoppen en links op mobiele apparaten.",
+    "2.5.6": "Sta meerdere invoermethoden toe, zoals toetsenbord, muis en touch. // Test met verschillende apparaten.",
+    "3.1.2": "Stel de taal in voor delen van de pagina die afwijken van de hoofdtaal. // Gebruik het lang-attribuut op relevante elementen.",
+    "3.2.3": "Houd navigatie consistent op alle pagina's. // Plaats menu's en navigatiebalken op dezelfde plek.",
+    "3.2.4": "Identificeer componenten met dezelfde functionaliteit consequent. // Gebruik dezelfde iconen en labels voor dezelfde acties.",
+    "3.3.3": "Geef suggesties voor het corrigeren van invoerfouten. // Toon voorbeeldwaarden of hints bij foutmeldingen.",
+    "3.3.4": "Laat gebruikers hun invoer controleren, corrigeren en bevestigen voor verzending. // Toon een samenvatting van de invoer voor bevestiging.",
+    "3.3.7": "Vul eerder ingevoerde informatie automatisch in waar mogelijk. // Gebruik autocomplete-attributen en bewaar gebruikersgegevens.",
+    "3.3.8": "Maak authenticatie toegankelijk zonder cognitieve tests. // Bied alternatieven zoals e-mailverificatie of wachtwoordmanagers.",
+    "1.2.6": "Voorzie vooraf opgenomen video's van gebarentaal. // Voeg een gebarentolk toe als video-inzet.",
+    "1.2.7": "Voeg uitgebreide audiodescriptie toe als pauzes in de audio onvoldoende zijn. // Gebruik een extra audiotrack met uitgebreide beschrijvingen.",
+    "1.2.8": "Bied een alternatief voor tijdgebaseerde media, zoals een volledig transcript. // Voeg een downloadbaar transcript toe.",
+    "1.2.9": "Voorzie live audio van een alternatief, zoals een live transcript. // Gebruik live captioning tools.",
+    "1.3.7": "Vul eerder ingevoerde informatie automatisch in waar mogelijk. // Gebruik autocomplete en bewaar gebruikersgegevens.",
+    "1.4.6": "Zorg voor extra hoog contrast (minimaal 7:1) voor tekst en afbeeldingen van tekst. // Gebruik een contrast checker.",
+    "1.4.7": "Zorg dat achtergrondgeluid laag is of uitgeschakeld kan worden bij spraak. // Voeg een knop toe om achtergrondgeluid te dempen.",
+    "1.4.8": "Bied opties voor visuele presentatie van tekstblokken, zoals kleurkeuze en regelafstand. // Voeg instellingen toe voor tekstweergave.",
+    "1.4.9": "Gebruik alleen afbeeldingen van tekst als decoratie of als het essentieel is. // Vervang afbeeldingen van tekst door echte tekst.",
+    "2.1.3": "Zorg dat alle functionaliteit via het toetsenbord bediend kan worden, zonder tijdslimieten. // Test met alleen het toetsenbord.",
+    "2.2.3": "Maak timing optioneel voor alle activiteiten. // Voeg een optie toe om tijdslimieten uit te schakelen.",
+    "2.2.4": "Laat gebruikers onderbrekingen uitstellen of onderdrukken. // Voeg een 'niet storen'-modus toe.",
+    "2.2.5": "Bewaar gebruikersgegevens bij opnieuw aanmelden na een sessie-timeout. // Sla formulierdata tijdelijk op.",
+    "2.2.6": "Waarschuw gebruikers voor time-outs die tot gegevensverlies kunnen leiden. // Toon een melding voor het verlopen van een sessie.",
+    "2.3.2": "Voorkom flitsen van meer dan drie keer per seconde. // Test animaties en video's op flitsen.",
+    "2.3.3": "Sta toe dat bewegingsanimaties uitgeschakeld kunnen worden. // Voeg een instelling toe om animaties te minimaliseren.",
+    "2.4.8": "Geef aan waar de gebruiker zich bevindt binnen een set pagina's. // Gebruik breadcrumbs of een voortgangsbalk.",
+    "2.4.9": "Zorg dat de bedoeling van elke link duidelijk is uit alleen de linktekst. // Gebruik beschrijvende linkteksten.",
+    "2.4.10": "Gebruik sectiekoppen om inhoud te structureren. // Gebruik semantische headings voor elke sectie.",
+    "2.4.11": "Maak de focusindicator duidelijk zichtbaar bij toetsenbordnavigatie. // Gebruik een opvallende rand of achtergrond.",
+    "2.5.7": "Bied alternatieven voor sleepbewegingen, zoals knoppen. // Voeg 'verplaats omhoog/omlaag'-knoppen toe naast drag-and-drop.",
+    "2.5.8": "Maak klikbare doelen minimaal 24x24px. // Vergroot kleine knoppen en links.",
+    "3.1.3": "Bied uitleg of definities voor ongebruikelijke woorden of jargon. // Voeg een verklarende woordenlijst toe.",
+    "3.1.4": "Bied de volledige betekenis van afkortingen aan. // Gebruik een tooltip of een verklarende lijst.",
+    "3.1.5": "Bied een eenvoudigere versie of uitleg voor moeilijke teksten. // Voeg een samenvatting of uitleg toe.",
+    "3.1.6": "Bied een manier om de uitspraak van woorden te tonen. // Voeg een audio-icoon of fonetische spelling toe.",
+    "3.2.5": "Laat contextwijzigingen alleen plaatsvinden op verzoek van de gebruiker. // Voeg een bevestigingsdialoog toe voor belangrijke acties.",
+    "3.3.5": "Bied contextafhankelijke hulp aan. // Voeg een helpknop of tooltip toe bij invoervelden.",
+    "3.3.6": "Laat gebruikers altijd hun invoer controleren, corrigeren en bevestigen voor verzending. // Toon een samenvatting van de invoer en een bevestigingsoptie voor verzending."
+  }
+}
