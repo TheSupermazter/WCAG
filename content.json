@@ -1,4 +1,5 @@
 {
+  "en":{
   "levelA": [
     {
       "id": "1.1.1",
@@ -424,7 +425,436 @@
       "name": "Error Prevention (All)",
       "description": "For web pages that require the user to submit information, the user is allowed to review, correct, and confirm before finalizing the submission."
     }
-  ],
+  ]},
+
+  "nl":{
+  "levelA": [
+  {
+    "id": "1.1.1",
+    "name": "Niet-tekstuele content",
+    "description": "Zorg voor tekstalternatieven voor afbeeldingen, iconen en andere niet-tekstuele content, zodat ondersteunende technologieën deze kunnen weergeven."
+  },
+  {
+    "id": "1.2.1",
+    "name": "Audio-only en video-only (vooraf opgenomen)",
+    "description": "Zorg voor een transcript voor vooraf opgenomen audio. Zorg voor een tekst- of audioalternatief voor vooraf opgenomen video."
+  },
+  {
+    "id": "1.2.2",
+    "name": "Ondertiteling (vooraf opgenomen)",
+    "description": "Voeg ondertiteling toe aan vooraf opgenomen video's met audio, zodat dove of slechthorende gebruikers deze kunnen begrijpen."
+  },
+  {
+    "id": "1.2.3",
+    "name": "Audiodescriptie of media-alternatief (vooraf opgenomen)",
+    "description": "Zorg voor audiodescriptie of een alternatief voor video-only content."
+  },
+  {
+    "id": "1.3.1",
+    "name": "Info en relaties",
+    "description": "Zorg ervoor dat koppen, lijsten, tabellen en andere structuren de juiste semantische opmaak gebruiken."
+  },
+  {
+    "id": "1.3.2",
+    "name": "Betekenisvolle volgorde",
+    "description": "Content moet worden gepresenteerd in een logische leesvolgorde die met ondersteunende technologieën werkt."
+  },
+  {
+    "id": "1.3.3",
+    "name": "Sensorische kenmerken",
+    "description": "Instructies mogen niet alleen afhankelijk zijn van vorm, grootte, geluid of visuele locatie (bijv. 'klik op de rode knop')."
+  },
+  {
+    "id": "1.3.4",
+    "name": "Oriëntatie",
+    "description": "Content mag de schermoriëntatie (portret/landschap) niet beperken."
+  },
+  {
+    "id": "1.3.5",
+    "name": "Identificeer het invoerdoel",
+    "description": "Verzamel programmatisch het invoerdoel (bijv. naam, e-mailadres) om automatisch invullen en personalisatie te ondersteunen."
+  },
+  {
+    "id": "1.4.1",
+    "name": "Gebruik van kleur",
+    "description": "Kleur alleen mag niet worden gebruikt om betekenis over te brengen (bijv. 'verplichte velden in het rood')."
+  },
+  {
+    "id": "1.4.2",
+    "name": "Audiocontrole",
+    "description": "Als audio automatisch afspeelt voor langer dan 3 seconden, moeten gebruikers dit kunnen pauzeren of stoppen."
+  },
+  {
+    "id": "2.1.1",
+    "name": "Toetsenbord",
+    "description": "Alle functionaliteit moet volledig bedienbaar zijn met het toetsenbord."
+  },
+  {
+    "id": "2.1.2",
+    "name": "Geen toetsenbordval",
+    "description": "Gebruikers mogen niet vast komen te zitten in een component bij gebruik van toetsenbordnavigatie."
+  },
+  {
+    "id": "2.1.4",
+    "name": "Sneltoetsen met enkelvoudige karakters",
+    "description": "Zorg voor een manier om sneltoetsen met één toets uit te schakelen of te herdefiniëren."
+  },
+  {
+    "id": "2.2.1",
+    "name": "Timing aanpasbaar",
+    "description": "Als er tijdslimieten zijn, moeten gebruikers deze kunnen verlengen of uitschakelen."
+  },
+  {
+    "id": "2.2.2",
+    "name": "Pauzeren, stoppen, verbergen",
+    "description": "Zorg voor besturingselementen om bewegende, knipperende of scrollende content te pauzeren, stoppen of verbergen."
+  },
+  {
+    "id": "2.3.1",
+    "name": "Drie flitsen of beneden drempelwaarde",
+    "description": "Geen enkele content mag meer dan 3 keer per seconde flitsen (om epileptische aanvallen te voorkomen)."
+  },
+  {
+    "id": "2.4.1",
+    "name": "Blokken omzeilen",
+    "description": "Zorg voor een mechanisme om herhaalde blokken content over te slaan (bijv. navigatiemenu's)."
+  },
+  {
+    "id": "2.4.2",
+    "name": "Paginatitel",
+    "description": "Elke pagina moet een beschrijvende, unieke titel hebben."
+  },
+  {
+    "id": "2.4.3",
+    "name": "Focusvolgorde",
+    "description": "De focusvolgorde moet een logische, voorspelbare sequentie volgen."
+  },
+  {
+    "id": "2.4.4",
+    "name": "Linkdoel (in context)",
+    "description": "Het doel van elke link moet duidelijk zijn vanuit de tekst of context."
+  },
+  {
+    "id": "2.5.1",
+    "name": "Aanwijzergebaren",
+    "description": "Vermijd het vereisen van complexe gebaren (bijv. pinch) tenzij er een alternatief wordt geboden."
+  },
+  {
+    "id": "2.5.2",
+    "name": "Annulering aanwijzer",
+    "description": "Zorg ervoor dat acties alleen worden geactiveerd bij loslaten, niet bij de initiële aanraking."
+  },
+  {
+    "id": "2.5.3",
+    "name": "Label in naam",
+    "description": "Toegankelijke namen moeten alle zichtbare tekstlabels bevatten."
+  },
+  {
+    "id": "2.5.4",
+    "name": "Bewegingsactivering",
+    "description": "Functies die worden geactiveerd door beweging (schudden, kantelen) moeten alternatieven hebben."
+  },
+  {
+    "id": "3.1.1",
+    "name": "Taal van de pagina",
+    "description": "Stel de hoofdtaal van de pagina in de code in."
+  },
+  {
+    "id": "3.2.1",
+    "name": "Bij focus",
+    "description": "Het automatisch wijzigen van context bij focus moet worden vermeden."
+  },
+  {
+    "id": "3.2.2",
+    "name": "Bij invoer",
+    "description": "Het wijzigen van invoer mag de context niet automatisch veranderen zonder waarschuwing."
+  },
+  {
+    "id": "3.3.1",
+    "name": "Foutidentificatie",
+    "description": "Identificeer invoerfouten duidelijk met tekstuele beschrijvingen."
+  },
+  {
+    "id": "3.3.2",
+    "name": "Labels of instructies",
+    "description": "Zorg voor duidelijke labels en instructies voor formuliervelden."
+  },
+  {
+    "id": "4.1.1",
+    "name": "Parsen",
+    "description": "Zorg ervoor dat de code geldig is en elementen correct genesteld zijn."
+  },
+  {
+    "id": "4.1.2",
+    "name": "Naam, rol, waarde",
+    "description": "UI-componenten moeten hun naam, rol en waarde blootstellen aan ondersteunende technologieën."
+  },
+  {
+    "id": "4.1.3",
+    "name": "Statusberichten",
+    "description": "Statusberichten moeten worden overgebracht naar ondersteunende technologieën."
+  }],
+  "levelAA": [
+  {
+    "id": "1.2.4",
+    "name": "Ondertiteling (live)",
+    "description": "Zorg voor ondertiteling voor live audiocontent in gesynchroniseerde media."
+  },
+  {
+    "id": "1.2.5",
+    "name": "Audiodescriptie (vooraf opgenomen)",
+    "description": "Zorg voor audiodescriptie voor alle vooraf opgenomen videocontent met audio."
+  },
+  {
+    "id": "1.3.6",
+    "name": "Identificeer doel",
+    "description": "Identificeer veelvoorkomende invoervelden en pictogrammen programmatisch om personalisatie te ondersteunen."
+  },
+  {
+    "id": "1.4.3",
+    "name": "Contrast (minimaal)",
+    "description": "Tekst en afbeeldingen van tekst moeten ten minste een contrastverhouding van 4.5:1 hebben (3:1 voor grote tekst)."
+  },
+  {
+    "id": "1.4.4",
+    "name": "Herschalen van tekst",
+    "description": "Tekst moet tot 200% herschaalbaar zijn zonder verlies de content of functionaliteit."
+  },
+  {
+    "id": "1.4.5",
+    "name": "Afbeeldingen van tekst",
+    "description": "Gebruik echte tekst in plaats van afbeeldingen van tekst, tenzij dit essentieel is."
+  },
+  {
+    "id": "1.4.10",
+    "name": "Reflow",
+    "description": "Content moet herindelen zonder dat er horizontaal scrollen nodig is, tot 400% zoom."
+  },
+  {
+    "id": "1.4.11",
+    "name": "Niet-tekst contrast",
+    "description": "Visuele elementen (pictogrammen, bedieningselementen) moeten voldoende contrast hebben met de achtergrond."
+  },
+  {
+    "id": "1.4.12",
+    "name": "Tekstafstand",
+    "description": "Content moet bruikbaar blijven wanneer gebruikers de tekstafstand wijzigen (regelafstand, letterafstand)."
+  },
+  {
+    "id": "1.4.13",
+    "name": "Content bij aanwijzen of focus",
+    "description": "Informatie die wordt getoond bij aanwijzen of focus moet te verbergen zijn, aan te wijzen zijn, en persistent zijn."
+  },
+  {
+    "id": "2.4.5",
+    "name": "Meerdere manieren",
+    "description": "Zorg voor meerdere manieren om een pagina binnen een reeks pagina's te vinden (zoeken, menu, sitemap)."
+  },
+  {
+    "id": "2.4.6",
+    "name": "Koppen en labels",
+    "description": "Gebruik beschrijvende koppen en labels om gebruikers te helpen content te begrijpen."
+  },
+  {
+    "id": "2.4.7",
+    "name": "Focus zichtbaar",
+    "description": "De focusindicator van het toetsenbord moet zichtbaar zijn."
+  },
+  {
+    "id": "2.5.5",
+    "name": "Doelgrootte (verbeterd in 2.2)",
+    "description": "Interactieve doelen moeten ten minste 24x24 CSS-pixels zijn."
+  },
+  {
+    "id": "2.5.6",
+    "name": "Gelijktijdige invoermechanismen",
+    "description": "Websites moeten meerdere invoermethoden toestaan (muis, toetsenbord, aanraken)."
+  },
+  {
+    "id": "3.1.2",
+    "name": "Taal van onderdelen",
+    "description": "Specificeer taalveranderingen binnen content (bijv. buitenlandse woorden)."
+  },
+  {
+    "id": "3.2.3",
+    "name": "Consistente navigatie",
+    "description": "Navigatiemechanismen moeten consistent verschijnen over verschillende pagina's."
+  },
+  {
+    "id": "3.2.4",
+    "name": "Consistente identificatie",
+    "description": "Componenten met dezelfde functionaliteit moeten consistent worden geïdentificeerd."
+  },
+  {
+    "id": "3.3.3",
+    "name": "Foutsuggestie",
+    "description": "Zorg voor suggesties om invoerfouten te corrigeren waar mogelijk."
+  },
+  {
+    "id": "3.3.4",
+    "name": "Foutpreventie (wettelijk, financieel, gegevens)",
+    "description": "Voor belangrijke transacties, bied bevestigings-, beoordelings- en correctiemogelijkheden."
+  },
+  {
+    "id": "3.3.7",
+    "name": "Redundante invoer (nieuw in 2.2)",
+    "description": "Vermijd het vragen aan gebruikers om dezelfde informatie meerdere keren opnieuw in te voeren."
+  },
+  {
+    "id": "3.3.8",
+    "name": "Toegankelijke authenticatie (nieuw in 2.2)",
+    "description": "Authenticatie mag niet alleen afhankelijk zijn van cognitieve functietesten (zoals puzzels)."
+  }],
+  "levelAAA": [
+  {
+    "id": "1.2.6",
+    "name": "Gebarentaal (vooraf opgenomen)",
+    "description": "Zorg voor gebarentaalinterpretatie voor alle vooraf opgenomen audiocontent."
+  },
+  {
+    "id": "1.2.7",
+    "name": "Uitgebreide audiodescriptie (vooraf opgenomen)",
+    "description": "Zorg voor uitgebreide audiodescriptie waar pauzes onvoldoende zijn."
+  },
+  {
+    "id": "1.2.8",
+    "name": "Media-alternatief (vooraf opgenomen)",
+    "description": "Zorg voor een volledig tekstalternatief voor vooraf opgenomen gesynchroniseerde media."
+  },
+  {
+    "id": "1.2.9",
+    "name": "Audio-only (live)",
+    "description": "Zorg voor een transcript of equivalent voor live audio-only content."
+  },
+  {
+    "id": "1.3.7",
+    "name": "Verminderde beweging (nieuw in 2.2)",
+    "description": "Zorg dat gebruikers beweging/animatie kunnen verminderen als dit ongemak veroorzaakt."
+  },
+  {
+    "id": "1.4.6",
+    "name": "Contrast (verbeterd)",
+    "description": "Tekst en afbeeldingen van tekst moeten ten minste een contrastverhouding van 7:1 hebben (4.5:1 voor grote tekst)."
+  },
+  {
+    "id": "1.4.7",
+    "name": "Weinig of geen achtergrondgeluid",
+    "description": "Achtergrondgeluiden moeten zacht zijn, uitschakelbaar, of ten minste 20 dB zachter dan voorgrondspraak."
+  },
+  {
+    "id": "1.4.8",
+    "name": "Visuele weergave",
+    "description": "Sta gebruikers toe om de visuele weergave (kleuren, afstand, lettertype) aan te passen."
+  },
+  {
+    "id": "1.4.9",
+    "name": "Afbeeldingen van tekst (geen uitzondering)",
+    "description": "Gebruik helemaal geen afbeeldingen van tekst."
+  },
+  {
+    "id": "2.1.3",
+    "name": "Toetsenbord (geen uitzondering)",
+    "description": "Alle content en functionaliteit moeten zonder uitzondering met het toetsenbord te bedienen zijn."
+  },
+  {
+    "id": "2.2.3",
+    "name": "Geen timing",
+    "description": "Geen tijdslimieten voor het voltooien van taken, tenzij essentieel."
+  },
+  {
+    "id": "2.2.4",
+    "name": "Onderbrekingen",
+    "description": "Gebruikers moeten onderbrekingen kunnen uitstellen of onderdrukken."
+  },
+  {
+    "id": "2.2.5",
+    "name": "Herauthentiseren",
+    "description": "Herauthenticatie mag niet leiden tot gegevensverlies."
+  },
+  {
+    "id": "2.2.6",
+    "name": "Time-outs",
+    "description": "Waarschuw gebruikers voor inactiviteit-time-outs die leiden tot gegevensverlies."
+  },
+  {
+    "id": "2.3.2",
+    "name": "Drie flitsen",
+    "description": "Geen enkele content flitst meer dan 3 keer per seconde, zelfs niet op hogere niveaus."
+  },
+  {
+    "id": "2.3.3",
+    "name": "Animatie door interactie (nieuw in 2.2)",
+    "description": "Zorg dat gebruikers animaties die door interacties worden geactiveerd kunnen uitschakelen."
+  },
+  {
+    "id": "2.4.8",
+    "name": "Locatie",
+    "description": "Geef informatie over de locatie van de gebruiker binnen een website, zoals kruimelpaden."
+  },
+  {
+    "id": "2.4.9",
+    "name": "Linkdoel (alleen link)",
+    "description": "Het doel van elke link moet identificeerbaar zijn uit de linktekst alleen."
+  },
+  {
+    "id": "2.4.10",
+    "name": "Sectiekoppen",
+    "description": "Gebruik koppen om alle content te organiseren."
+  },
+  {
+    "id": "2.4.11",
+    "name": "Focusweergave (nieuw in 2.2)",
+    "description": "De focusindicator moet zeer zichtbaar zijn en voldoen aan contrastvereisten."
+  },
+  {
+    "id": "2.5.7",
+    "name": "Slepen (nieuw in 2.2)",
+    "description": "Zorg voor alternatieven voor acties die slepen vereisen."
+  },
+  {
+    "id": "2.5.8",
+    "name": "Doelgrootte (minimaal) (nieuw in 2.2)",
+    "description": "Doelen moeten ten minste 24x24 CSS-pixels zijn met beperkte uitzonderingen."
+  },
+  {
+    "id": "3.1.3",
+    "name": "Ongebruikelijke woorden",
+    "description": "Zorg voor definities or uitleg voor ongebruikelijke of technische termen."
+  },
+  {
+    "id": "3.1.4",
+    "name": "Afkortingen",
+    "description": "Zorg voor de uitgeschreven versie of betekenis van afkortingen."
+  },
+  {
+    "id": "3.1.5",
+    "name": "Leesniveau",
+    "description": "Content mag geen leesvaardigheid vereisen die geavanceerder is dan het niveau van de lagere school."
+  },
+  {
+    "id": "3.1.6",
+    "name": "Uitspraak",
+    "description": "Zorg voor uitspraakbegeleiding voor woorden waarvan de betekenis afhangt van de uitspraak."
+  },
+  {
+    "id": "3.2.5",
+    "name": "Verandering op verzoek",
+    "description": "Contextwijzigingen mogen alleen plaatsvinden wanneer de gebruiker hierom vraagt."
+  },
+  {
+    "id": "3.3.5",
+    "name": "Hulp",
+    "description": "Zorg voor hulpmiddelen, zoals FAQ's, instructies of contactmogelijkheden."
+  },
+  {
+    "id": "3.3.6",
+    "name": "Foutpreventie (alle)",
+    "description": "Voor alle formulieren, sta beoordeling, correctie en bevestiging toe voor verzending."
+  }
+]},
+
+
+
   "imageDescriptions": {
     "1.1.1": "Zorg dat je bij alle afbeeldingen een alt-tekst toevoegt en aria-labels gebruikt voor iconen. // Gebruik het HTML-attribuut alt voor &lt;img&gt; en aria-label voor &lt;svg&gt; of &lt;i&gt; iconen.",
     "1.2.1": "Als je audio of video gebruikt, zorg dan voor een transcript of tekstalternatief. // Voeg een transcript toe in HTML, bijvoorbeeld in een &lt;details&gt; of &lt;div&gt; onder de media.",
