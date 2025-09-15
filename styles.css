@@ -19,11 +19,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    /* background-color: #21897E; */
     background-color: #243445;
     color: #333;
 }
 header {
     background: #243445;
+    /* background: #1CA093; */
     color: #fff;
     padding: 1rem 2rem;
     display: flex;
@@ -49,10 +51,15 @@ header h1, header p {
 
 header img{
     margin-top: 30px;
+    max-height: 15vh;
+
 }
 #reset-button, #lang-toggle-button {
     background-color: #fa3d4f;
     color: white;
+    /* background-color: #FFF;
+    color: black; */
+
     border: none;
     padding: 10px 15px;
     font-size: 1rem;
@@ -62,18 +69,25 @@ header img{
 }
 #lang-toggle-button {
     background-color: #fa3d4f;
+    /* background-color: #FFF;
+    color: black; */
 }
 #reset-button:hover {
     background-color: #c9302c;
+    /* background-color: #FFF;
+    color: black; */
 }
 #lang-toggle-button:hover {
     background-color: #fa3d4f;
+    /* background-color: #FFF;
+    color: black; */
 }
 main {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     background: #31465c;
+    /* background: #F0E7DA; */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -92,7 +106,9 @@ header h1, h2 {
 }
 .checklist li {
     background: #425563;
+    /* background: #FFF; */
     color: white;
+    /* color: rgb(35, 35, 35); */
     border: 1px solid #ddd;
     margin-bottom: 10px;
     padding: 15px;
@@ -106,6 +122,8 @@ header h1, h2 {
 }
 .checklist li:hover {
     background-color: #708b9f;
+    /* background-color: #d0d0d0; */
+
 }
 .checklist li h3 {
     margin: 0 0 5px 0;
@@ -143,6 +161,8 @@ header h1, h2 {
 }
 .info-button:hover {
     background-color: #fa3d4f;
+    /* background-color: #FFFFFF;
+    color: black; */
 }
 .expanded-content {
     display: none;
@@ -207,9 +227,12 @@ header h1, h2 {
 #confirm-reset-button {
     background-color: #fa3d4f;
     color: white;
+    /* background-color: #FFFFFF;
+    color: black; */
 }
 #confirm-reset-button:hover {
     background-color: #fa3d4f;
+    /* background-color: #FFFFFF; */
 }
 #cancel-reset-button {
     background-color: #f0f0f0;
@@ -302,10 +325,11 @@ header h1, h2 {
     top: 50%;
     transform: translateY(-50%);
     background-color: #31465c;
+    /* background-color: rgb(0, 159, 157); */
     color: white;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -400,14 +424,17 @@ a {
     top: 0;
     z-index: 10;
     background: #31465c;
+    /* background-color: rgb(0, 159, 157); */
     border-bottom: 2px solid #355167;
     padding: 0.5rem 0 0.5rem 0.5rem;
     cursor: pointer;
+    border-radius: 5px;
     transition: background 0.2s;
 }
 .sticky-section-header.collapsed {
     border-bottom: none;
     background: #32455a;
+    /* background-color: rgb(0, 159, 157); */
     opacity: 0.95;
     border-radius: 10px;
 }
@@ -422,7 +449,8 @@ a {
     margin-right: 10px;
     transition: transform 0.2s;
     display: inline-block;
-    color: #fa3d4f; /* Use a visible accent color */
+    color: #fa3d4f;
+    /* color: white; */
     font-weight: bold;
 }
 .sticky-section-header.collapsed .collapse-arrow {
